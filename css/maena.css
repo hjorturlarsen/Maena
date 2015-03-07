@@ -1,0 +1,393 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
+	margin:0;
+	padding:0;
+	border-width:0;
+}
+td, th {
+	border-style:solid;
+	border-width:1px;
+}
+table {
+	border-collapse:collapse;
+}
+li {
+	display:block;
+}
+body {
+	font-size:12px;
+	-epub-hyphens:auto;
+}
+p.Heiti-greinar {
+	-epub-ruby-position:over;
+	color:#000000;
+	font-family:"Acta Display Bold", serif;
+	font-size:88px;
+	font-style:italic;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.114;
+	margin-bottom:0px;
+	margin-left:0px;
+	margin-right:0px;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0px;
+}
+p.H-fundur {
+	-epub-ruby-position:over;
+	color:#000000;
+	font-family:"Univers LT Std 85 XBlk", sans-serif;
+	font-size:12px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:950;
+	line-height:1.5;
+	margin-bottom:0px;
+	margin-left:0px;
+	margin-right:0px;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0px;
+}
+p.Meginm-l {
+	-epub-hyphens:none;
+	-epub-ruby-position:over;
+	color:#000000;
+	font-family:"Univers LT Std 45 Light", sans-serif;
+	font-size:12px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.167;
+	margin-bottom:0px;
+	margin-left:0px;
+	margin-right:0px;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0px;
+}
+p.x-bein-tilvitnun {
+	-epub-hyphens:none;
+	-epub-ruby-position:over;
+	color:#000000;
+	font-family:"Univers LT Std 55", sans-serif;
+	font-size:12px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.167;
+	margin-bottom:0px;
+	margin-left:20px;
+	margin-right:0px;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0px;
+}
+p.Ne-anm-lsgrein {
+	-epub-hyphens:none;
+	-epub-ruby-position:over;
+	color:#000000;
+	font-family:"Univers LT Std 55", sans-serif;
+	font-size:6px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.292;
+	margin-bottom:0px;
+	margin-left:0px;
+	margin-right:0px;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0px;
+}
+p.Millifyrirs-gn {
+	-epub-ruby-position:over;
+	color:#000000;
+	font-family:"Univers LT Std 85 XBlk", sans-serif;
+	font-size:12px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:950;
+	line-height:1.167;
+	margin-bottom:0px;
+	margin-left:0px;
+	margin-right:0px;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0px;
+}
+p.Pull-Quote {
+	-epub-ruby-position:over;
+	color:#000000;
+	font-family:"Acta Deck Bold", serif;
+	font-size:20px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.2;
+	margin-bottom:0px;
+	margin-left:0px;
+	margin-right:9px;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0px;
+}
+p.Running-header---Bls- {
+	-epub-hyphens:none;
+	-epub-ruby-position:over;
+	color:#000000;
+	font-family:"Univers LT Std 55", sans-serif;
+	font-size:6px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:2.333;
+	margin-bottom:0px;
+	margin-left:0px;
+	margin-right:0px;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0px;
+}
+span.Footnote-reference {
+	font-family:"Univers LT Std 45 Light", sans-serif;
+	font-size:6px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+}
+span.footnote-reference--ne-anm-ls-t-lustafur {
+	font-family:"Univers LT Std 45 Light", sans-serif;
+	font-size:6px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+}
+span.Sk-letur {
+	font-style:oblique;
+	font-weight:bold;
+}
+span.Sk-letur-ne-anm-lsgreinar {
+	font-style:oblique;
+	font-weight:normal;
+}
+span.Feitletur {
+	font-style:normal;
+	font-weight:normal;
+}
+span.Bold {
+	font-style:normal;
+	font-weight:bold;
+}
+p.para-style-override-1 {
+	-epub-hyphens:none;
+	font-size:72px;
+	font-style:normal;
+	font-weight:normal;
+}
+p.para-style-override-2 {
+	font-style:normal;
+	font-weight:normal;
+}
+p.para-style-override-3 {
+	text-align:center;
+}
+p.para-style-override-4 {
+	margin-left:43px;
+}
+p.para-style-override-5 {
+	text-align:right;
+}
+p.para-style-override-6 {
+	font-family:"Acta Book", serif;
+	font-style:normal;
+	font-weight:normal;
+}
+p.para-style-override-7 {
+	font-size:15px;
+	font-style:italic;
+	font-weight:bold;
+	text-align:center;
+}
+p.para-style-override-8 {
+	font-style:oblique;
+	font-weight:normal;
+}
+p.para-style-override-9 {
+	-epub-hyphens:none;
+}
+p.para-style-override-10 {
+	font-size:14px;
+}
+p.para-style-override-11 {
+	font-style:normal;
+	font-weight:bold;
+}
+p.para-style-override-12 {
+	margin-left:0px;
+}
+p.para-style-override-13 {
+	font-size:72px;
+	font-style:normal;
+	font-weight:normal;
+}
+p.para-style-override-14 {
+	margin-right:43px;
+}
+p.para-style-override-15 {
+	-epub-hyphens:none;
+	font-style:normal;
+	font-weight:bold;
+}
+p.para-style-override-16 {
+	break-after:column;
+}
+p.para-style-override-17 {
+	margin-left:20px;
+}
+span.char-style-override-1 {
+	font-style:normal;
+	font-weight:normal;
+}
+span.char-style-override-2 {
+	color:#000000;
+}
+span.char-style-override-3 {
+	font-style:italic;
+	font-weight:normal;
+}
+span.char-style-override-4 {
+	font-family:"Acta Book", serif;
+	font-style:normal;
+	font-weight:normal;
+}
+span.char-style-override-5 {
+	font-size:11px;
+}
+span.char-style-override-6 {
+	font-size:12px;
+}
+span.char-style-override-7 {
+	font-size:12px;
+	text-decoration:underline;
+}
+span.char-style-override-8 {
+	font-style:oblique;
+	font-weight:normal;
+}
+span.char-style-override-9 {
+	font-style:normal;
+	font-weight:bold;
+}
+span.char-style-override-10 {
+	font-size:7px;
+	vertical-align:super;
+}
+span.char-style-override-11 {
+	font-size:14px;
+	font-style:normal;
+	font-weight:normal;
+}
+span.char-style-override-12 {
+	font-family:Wingdings, sans-serif;
+	font-style:normal;
+	font-weight:normal;
+}
+span.char-style-override-13 {
+	font-style:oblique;
+	font-weight:bold;
+}
+span.char-style-override-14 {
+	color:#ee2624;
+}
+span.char-style-override-15 {
+	font-size:6px;
+}
+img.frame-1 {
+	height:278px;
+	width:218px;
+}
+div.frame-2 {
+	margin:0px auto 0px auto;
+	text-align:center;
+}
+img.frame-3 {
+	height:161px;
+	width:169px;
+}
+img.frame-4 {
+	height:162px;
+	width:169px;
+}
+img.frame-5 {
+	height:175px;
+	width:336px;
+}
+img.frame-6 {
+	height:167px;
+	width:249px;
+}
+img.frame-7 {
+	height:295px;
+	width:216px;
+}
+img.frame-8 {
+	height:177px;
+	width:260px;
+}
+img.frame-9 {
+	height:631px;
+	width:423px;
+}
+img.frame-10 {
+	height:638px;
+	width:423px;
+}
+img.frame-11 {
+	height:349px;
+	width:225px;
+}
+img.frame-12 {
+	height:218px;
+	width:279px;
+}
+img.frame-13 {
+	height:635px;
+	width:423px;
+}
+img.frame-14 {
+	height:641px;
+	width:423px;
+}
+img.frame-15 {
+	height:357px;
+	width:251px;
+}
+img.frame-16 {
+	height:634px;
+	width:423px;
+}
+img.frame-17 {
+	height:494px;
+	width:118px;
+}
+img.frame-18 {
+	height:274px;
+	width:379px;
+}
+img.frame-19 {
+	height:521px;
+	width:380px;
+}
+img.frame-20 {
+	height:275px;
+	width:205px;
+}
+img.frame-21 {
+	height:253px;
+	width:292px;
+}
+img.frame-22 {
+	height:288px;
+	width:205px;
+}
