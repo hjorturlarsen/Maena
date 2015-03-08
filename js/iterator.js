@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     console.log("Fetching json...");
 
-    $.getJSON("../json/maena_json.json", function(data) {
+    $.getJSON("../json/maena.json", function(data) {
 
         console.log("Working with json data...");
 

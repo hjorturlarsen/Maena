@@ -17,16 +17,6 @@ body {
 	font-size:12px;
 	-epub-hyphens:auto;
 }
-
-@font-face{
-	font-family: "Acta Display Bold";
-	src:url("../fonts/ActaDisplay-Black.otf");
-}
-
-@font-face{
-	font-family: "Univers LT Std 45 Light";
-	src:url("../fonts/UniversLTStd.otf");
-}
 p.Heiti-greinar {
 	-epub-ruby-position:over;
 	color:#000000;
