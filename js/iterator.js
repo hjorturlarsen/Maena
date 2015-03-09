@@ -10,7 +10,7 @@ $(document).ready(function () {
                 var article = data[item];
 
                 if (data.hasOwnProperty(item)) {
-
+                    
                     for (var item in article) {
                         $('.container').append($.parseHTML(article[item]));
                     }
