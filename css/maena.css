@@ -24,9 +24,31 @@ body {
 }
 
 @font-face{
-	font-family: "Univers LT Std 45 Light";
+	font-family: "Acta Display Black";
+	src:url("../fonts/ActaDisplay-Black.otf");
+}
+
+@font-face{
+	font-family: "Acta Deck Bold";
+	src:url("../fonts/ActaDeck-Bold.otf");
+}
+
+@font-face{
+	font-family: "UniversLTStd";
 	src:url("../fonts/UniversLTStd.otf");
 }
+
+@font-face{
+	font-family: "UniversLTStd-XBlack.otf";
+	src:url("../fonts/UniversLTStd-XBlack.otf");
+}
+
+@font-face{
+	font-family: "Windings";
+	src:url("../fonts/Windings.ttf");
+}
+
+
 p.Heiti-greinar {
 	-epub-ruby-position:over;
 	color:#000000;
@@ -43,10 +65,10 @@ p.Heiti-greinar {
 	text-decoration:none;
 	text-indent:0px;
 }
-p.H-fundur {
+p.Hofundur {
 	-epub-ruby-position:over;
 	color:#000000;
-	font-family:"Univers LT Std 85 XBlk", sans-serif;
+	font-family:"UniversLTStd", sans-serif;
 	font-size:12px;
 	font-style:normal;
 	font-variant:normal;
@@ -59,11 +81,11 @@ p.H-fundur {
 	text-decoration:none;
 	text-indent:0px;
 }
-p.Meginm-l {
+p.Meginmal {
 	-epub-hyphens:none;
 	-epub-ruby-position:over;
 	color:#000000;
-	font-family:"Univers LT Std 45 Light", sans-serif;
+	font-family:"UniversLTStd", sans-serif;
 	font-size:12px;
 	font-style:normal;
 	font-variant:normal;
@@ -80,9 +102,9 @@ p.x-bein-tilvitnun {
 	-epub-hyphens:none;
 	-epub-ruby-position:over;
 	color:#000000;
-	font-family:"Univers LT Std 55", sans-serif;
+	font-family:"UniversLTStd", sans-serif;
 	font-size:12px;
-	font-style:normal;
+	font-style:italic;
 	font-variant:normal;
 	font-weight:normal;
 	line-height:1.167;
@@ -97,7 +119,7 @@ p.Ne-anm-lsgrein {
 	-epub-hyphens:none;
 	-epub-ruby-position:over;
 	color:#000000;
-	font-family:"Univers LT Std 55", sans-serif;
+	font-family:"UniversLTStd", sans-serif;
 	font-size:6px;
 	font-style:normal;
 	font-variant:normal;
@@ -113,7 +135,7 @@ p.Ne-anm-lsgrein {
 p.Millifyrirs-gn {
 	-epub-ruby-position:over;
 	color:#000000;
-	font-family:"Univers LT Std 85 XBlk", sans-serif;
+	font-family:"UniversLTStd-XBlack", sans-serif;
 	font-size:12px;
 	font-style:normal;
 	font-variant:normal;
@@ -146,7 +168,7 @@ p.Running-header---Bls- {
 	-epub-hyphens:none;
 	-epub-ruby-position:over;
 	color:#000000;
-	font-family:"Univers LT Std 55", sans-serif;
+	font-family:"UniversLTStd", sans-serif;
 	font-size:6px;
 	font-style:normal;
 	font-variant:normal;
@@ -160,24 +182,24 @@ p.Running-header---Bls- {
 	text-indent:0px;
 }
 span.Footnote-reference {
-	font-family:"Univers LT Std 45 Light", sans-serif;
+	font-family:"UniversLTStd", sans-serif;
 	font-size:6px;
 	font-style:normal;
 	font-variant:normal;
 	font-weight:bold;
 }
 span.footnote-reference--ne-anm-ls-t-lustafur {
-	font-family:"Univers LT Std 45 Light", sans-serif;
+	font-family:"UniversLTStd", sans-serif;
 	font-size:6px;
 	font-style:normal;
 	font-variant:normal;
 	font-weight:bold;
 }
-span.Sk-letur {
+span.Skaletur {
 	font-style:oblique;
 	font-weight:bold;
 }
-span.Sk-letur-ne-anm-lsgreinar {
+span.Skaletur-nedanmalsgreinar {
 	font-style:oblique;
 	font-weight:normal;
 }
@@ -209,7 +231,7 @@ p.para-style-override-5 {
 	text-align:right;
 }
 p.para-style-override-6 {
-	font-family:"Acta Book", serif;
+	font-family:"Acta Display Black", serif;
 	font-style:normal;
 	font-weight:normal;
 }
@@ -267,7 +289,7 @@ span.char-style-override-3 {
 	font-weight:normal;
 }
 span.char-style-override-4 {
-	font-family:"Acta Book", serif;
+	font-family:"Acta Display Black", serif;
 	font-style:normal;
 	font-weight:normal;
 }

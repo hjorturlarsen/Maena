@@ -1,16 +1,26 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-    console.log("Fetching json...");
+    console.log("Fetching JSON...");
 
-    $.getJSON("../json/maena.json", function(data) {
+    $.getJSON("../json/maena.json", function (data) {
 
-        console.log("Working with json data...");
+            console.log("Working with JSON data...");
 
-        $.each(data, function(key, val) {
-            $(".container").append($.parseHTML(this.title1));
-            $(".container").append($.parseHTML(this.title2));
-            $(".container").append($.parseHTML(this.content));
-            $(".container").append($.parseHTML(this.author));
+            for (var item in data) {
+                var article = data[item];
+
+                if (data.hasOwnProperty(item)) {
+
+                    for (var item in article) {
+                        $('.container').append($.parseHTML(article[item]));
+                    }
+                }
+            }
+        })
+        .error(function () {
+            console.log("Error working with JSON");
+        })
+        .complete(function () {
+            console.log("Done working with JSON!");
         });
-    });
 });
