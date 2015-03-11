@@ -1,0 +1,14 @@
+body {
+    background-image: url("../image/strip.jpg");
+    height: 24494px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.section {
+	height: 1080px;
+	color: #FFFFFF;
+	background-color: rgba(255, 255, 255, 0.5);
+	overflow: scroll;
+}
