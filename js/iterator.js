@@ -8,11 +8,11 @@ $(document).ready(function () {
 
             for (var item in data) {
                 var article = data[item];
-
                 if (data.hasOwnProperty(item)) {
-                    
                     for (var item in article) {
-                        $('.container').append($.parseHTML(article[item]));
+                        if(article.hasOwnProperty(item) && isNaN(item)) {
+                            $('.articles-container').append($.parseHTML(article[item]));
+                        }
                     }
                 }
             }

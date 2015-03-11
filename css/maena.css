@@ -1,425 +1,412 @@
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
-	margin:0;
-	padding:0;
-	border-width:0;
+@font-face {
+    font-family: "Acta Display Bold";
+    src: url("../fonts/ActaDisplay-Black.otf");
 }
-td, th {
-	border-style:solid;
-	border-width:1px;
+@font-face {
+    font-family: "Acta Display Black";
+    src: url("../fonts/ActaDisplay-Black.otf");
 }
-table {
-	border-collapse:collapse;
+@font-face {
+    font-family: "Acta Deck Bold";
+    src: url("../fonts/ActaDeck-Bold.otf");
 }
-li {
-	display:block;
+@font-face {
+    font-family: "UniversLTStd";
+    src: url("../fonts/UniversLTStd.otf");
 }
-body {
-	font-size:12px;
-	-epub-hyphens:auto;
+@font-face {
+    font-family: "UniversLTStd-Black";
+    src: url("../fonts/UniversLTStd-Black.otf");
 }
-
-@font-face{
-	font-family: "Acta Display Bold";
-	src:url("../fonts/ActaDisplay-Black.otf");
+@font-face {
+    font-family: "UniversLTStd-XBlack";
+    src: url("../fonts/UniversLTStd-XBlack.otf");
 }
-
-@font-face{
-	font-family: "Acta Display Black";
-	src:url("../fonts/ActaDisplay-Black.otf");
+@font-face {
+    font-family: "Windings";
+    src: url("../fonts/Windings.ttf");
 }
-
-@font-face{
-	font-family: "Acta Deck Bold";
-	src:url("../fonts/ActaDeck-Bold.otf");
+@font-face {
+    font-family: "Everson Mono";
+    src: url("../fonts/Everson Mono.ttf");
 }
-
-@font-face{
-	font-family: "UniversLTStd";
-	src:url("../fonts/UniversLTStd.otf");
-}
-
-@font-face{
-	font-family: "UniversLTStd-XBlack.otf";
-	src:url("../fonts/UniversLTStd-XBlack.otf");
-}
-
-@font-face{
-	font-family: "Windings";
-	src:url("../fonts/Windings.ttf");
-}
-
-
 p.Heiti-greinar {
-	-epub-ruby-position:over;
-	color:#000000;
-	font-family:"Acta Display Bold", serif;
-	font-size:88px;
-	font-style:italic;
-	font-variant:normal;
-	font-weight:bold;
-	line-height:1.114;
-	margin-bottom:0px;
-	margin-left:0px;
-	margin-right:0px;
-	text-align:left;
-	text-decoration:none;
-	text-indent:0px;
+    -epub-ruby-position: over;
+    color: #000000;
+    font-family: "Acta Display Bold", serif;
+    font-size: 88px;
+    font-variant: normal;
+    font-weight: bold;
+    line-height: 1.114;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0px;
 }
 p.Hofundur {
-	-epub-ruby-position:over;
-	color:#000000;
-	font-family:"UniversLTStd", sans-serif;
-	font-size:12px;
-	font-style:normal;
-	font-variant:normal;
-	font-weight:950;
-	line-height:1.5;
-	margin-bottom:0px;
-	margin-left:0px;
-	margin-right:0px;
-	text-align:left;
-	text-decoration:none;
-	text-indent:0px;
+    -epub-ruby-position: over;
+    color: #000000;
+    font-family: "UniversLTStd", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 950;
+    line-height: 1.5;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0px;
 }
 p.Meginmal {
-	-epub-hyphens:none;
-	-epub-ruby-position:over;
-	color:#000000;
-	font-family:"UniversLTStd", sans-serif;
-	font-size:12px;
-	font-style:normal;
-	font-variant:normal;
-	font-weight:bold;
-	line-height:1.167;
-	margin-bottom:0px;
-	margin-left:0px;
-	margin-right:0px;
-	text-align:left;
-	text-decoration:none;
-	text-indent:0px;
+    -epub-hyphens: none;
+    -epub-ruby-position: over;
+    color: #000000;
+    font-family: "UniversLTStd", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    line-height: 1.167;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0px;
 }
 p.x-bein-tilvitnun {
-	-epub-hyphens:none;
-	-epub-ruby-position:over;
-	color:#000000;
-	font-family:"UniversLTStd", sans-serif;
-	font-size:12px;
-	font-style:italic;
-	font-variant:normal;
-	font-weight:normal;
-	line-height:1.167;
-	margin-bottom:0px;
-	margin-left:20px;
-	margin-right:0px;
-	text-align:left;
-	text-decoration:none;
-	text-indent:0px;
-}
-p.Ne-anm-lsgrein {
-	-epub-hyphens:none;
-	-epub-ruby-position:over;
-	color:#000000;
-	font-family:"UniversLTStd", sans-serif;
-	font-size:6px;
-	font-style:normal;
-	font-variant:normal;
-	font-weight:normal;
-	line-height:1.292;
-	margin-bottom:0px;
-	margin-left:0px;
-	margin-right:0px;
-	text-align:left;
-	text-decoration:none;
-	text-indent:0px;
+    -epub-hyphens: none;
+    -epub-ruby-position: over;
+    color: #000000;
+    font-family: "UniversLTStd", sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1.167;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    margin-right: 0px;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0px;
 }
 p.Millifyrirs-gn {
-	-epub-ruby-position:over;
-	color:#000000;
-	font-family:"UniversLTStd-XBlack", sans-serif;
-	font-size:12px;
-	font-style:normal;
-	font-variant:normal;
-	font-weight:950;
-	line-height:1.167;
-	margin-bottom:0px;
-	margin-left:0px;
-	margin-right:0px;
-	text-align:left;
-	text-decoration:none;
-	text-indent:0px;
+    -epub-ruby-position: over;
+    color: #000000;
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 950;
+    line-height: 1.167;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0px;
 }
 p.Pull-Quote {
-	-epub-ruby-position:over;
-	color:#000000;
-	font-family:"Acta Deck Bold", serif;
-	font-size:20px;
-	font-style:normal;
-	font-variant:normal;
-	font-weight:bold;
-	line-height:1.2;
-	margin-bottom:0px;
-	margin-left:0px;
-	margin-right:9px;
-	text-align:left;
-	text-decoration:none;
-	text-indent:0px;
-}
-p.Running-header---Bls- {
-	-epub-hyphens:none;
-	-epub-ruby-position:over;
-	color:#000000;
-	font-family:"UniversLTStd", sans-serif;
-	font-size:6px;
-	font-style:normal;
-	font-variant:normal;
-	font-weight:normal;
-	line-height:2.333;
-	margin-bottom:0px;
-	margin-left:0px;
-	margin-right:0px;
-	text-align:left;
-	text-decoration:none;
-	text-indent:0px;
+    -epub-ruby-position: over;
+    color: #000000;
+    font-family: "Acta Deck Bold", serif;
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 9px;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0px;
 }
 span.Footnote-reference {
-	font-family:"UniversLTStd", sans-serif;
-	font-size:6px;
-	font-style:normal;
-	font-variant:normal;
-	font-weight:bold;
+    font-family: "UniversLTStd", sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
 }
-span.footnote-reference--ne-anm-ls-t-lustafur {
-	font-family:"UniversLTStd", sans-serif;
-	font-size:6px;
-	font-style:normal;
-	font-variant:normal;
-	font-weight:bold;
+span.footnote-reference--nedanmals-tolustafur {
+    font-family: "UniversLTStd", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
 }
 span.Skaletur {
-	font-style:oblique;
-	font-weight:bold;
+    font-style: oblique;
+    font-weight: bold;
 }
 span.Skaletur-nedanmalsgreinar {
-	font-style:oblique;
-	font-weight:normal;
+    font-style: oblique;
+    font-weight: normal;
 }
 span.Feitletur {
-	font-style:normal;
-	font-weight:normal;
+    font-style: normal;
+    font-weight: normal;
 }
 span.Bold {
-	font-style:normal;
-	font-weight:bold;
+    font-style: normal;
+    font-weight: bold;
 }
 p.para-style-override-1 {
-	-epub-hyphens:none;
-	font-size:72px;
-	font-style:normal;
-	font-weight:normal;
+    -epub-hyphens: none;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: normal;
 }
 p.para-style-override-2 {
-	font-style:normal;
-	font-weight:normal;
+    font-style: normal;
+    font-weight: normal;
 }
 p.para-style-override-3 {
-	text-align:center;
+    text-align: center;
 }
 p.para-style-override-4 {
-	margin-left:43px;
+    margin-left: 43px;
 }
 p.para-style-override-5 {
-	text-align:right;
+    text-align: right;
 }
 p.para-style-override-6 {
-	font-family:"Acta Display Black", serif;
-	font-style:normal;
-	font-weight:normal;
+    font-family: "Acta Display Black", serif;
+    font-style: normal;
+    font-weight: normal;
 }
 p.para-style-override-7 {
-	font-size:15px;
-	font-style:italic;
-	font-weight:bold;
-	text-align:center;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
 }
 p.para-style-override-8 {
-	font-style:oblique;
-	font-weight:normal;
+    font-style: oblique;
+    font-weight: normal;
 }
 p.para-style-override-9 {
-	-epub-hyphens:none;
+    -epub-hyphens: none;
 }
 p.para-style-override-10 {
-	font-size:14px;
+    font-size: 14px;
 }
 p.para-style-override-11 {
-	font-style:normal;
-	font-weight:bold;
+    font-style: normal;
+    font-weight: bold;
 }
 p.para-style-override-12 {
-	margin-left:0px;
+    margin-left: 0px;
 }
 p.para-style-override-13 {
-	font-size:72px;
-	font-style:normal;
-	font-weight:normal;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: normal;
 }
 p.para-style-override-14 {
-	margin-right:43px;
+    margin-right: 43px;
 }
 p.para-style-override-15 {
-	-epub-hyphens:none;
-	font-style:normal;
-	font-weight:bold;
+    -epub-hyphens: none;
+    font-style: normal;
+    font-weight: bold;
 }
 p.para-style-override-16 {
-	break-after:column;
+    break-after: column;
 }
 p.para-style-override-17 {
-	margin-left:20px;
+    margin-left: 20px;
 }
 span.char-style-override-1 {
-	font-style:normal;
-	font-weight:normal;
+	font-family: "UniversLTStd-XBlack";
 }
 span.char-style-override-2 {
-	color:#000000;
+    font-family: "UniversLTStd";
 }
 span.char-style-override-3 {
-	font-style:italic;
-	font-weight:normal;
-}
-span.char-style-override-4 {
-	font-family:"Acta Display Black", serif;
-	font-style:normal;
-	font-weight:normal;
-}
-span.char-style-override-5 {
-	font-size:11px;
-}
-span.char-style-override-6 {
-	font-size:12px;
+    font-style: italic;
+    font-weight: normal;
 }
 span.char-style-override-7 {
-	font-size:12px;
-	text-decoration:underline;
+    font-family:"Everson Mono", serif;
+    font-style:normal;
+    font-weight:bold;
+}
+span.char-style-override-5 {
+}
+span.char-style-override-6 {
+    font-size: 18px;
+}
+span.char-style-override-7 {
+    font-size: 18px;
+    text-decoration: underline;
 }
 span.char-style-override-8 {
-	font-style:oblique;
-	font-weight:normal;
+    font-style: oblique;
+    font-weight: normal;
 }
 span.char-style-override-9 {
-	font-style:normal;
-	font-weight:bold;
+    font-style: normal;
+    font-weight: bold;
 }
 span.char-style-override-10 {
-	font-size:7px;
-	vertical-align:super;
+    font-size: 7px;
+    vertical-align: super;
 }
 span.char-style-override-11 {
-	font-size:14px;
-	font-style:normal;
-	font-weight:normal;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
 }
 span.char-style-override-12 {
-	font-family:Wingdings, sans-serif;
-	font-style:normal;
-	font-weight:normal;
+    font-family: Wingdings, sans-serif;
+    font-style: normal;
+    font-weight: normal;
 }
 span.char-style-override-13 {
-	font-style:oblique;
-	font-weight:bold;
+    font-style: oblique;
+    font-weight: bold;
 }
 span.char-style-override-14 {
-	color:#ee2624;
+    color: #ee2624;
 }
 span.char-style-override-15 {
-	font-size:6px;
+    font-size: 6px;
 }
 img.frame-1 {
-	height:278px;
-	width:218px;
+    height: 278px;
+    width: 218px;
 }
 div.frame-2 {
-	margin:0px auto 0px auto;
-	text-align:center;
+    margin: 0px auto 0px auto;
+    text-align: center;
 }
 img.frame-3 {
-	height:161px;
-	width:169px;
+    height: 161px;
+    width: 169px;
 }
 img.frame-4 {
-	height:162px;
-	width:169px;
+    height: 162px;
+    width: 169px;
 }
 img.frame-5 {
-	height:175px;
-	width:336px;
+    height: 175px;
+    width: 336px;
 }
 img.frame-6 {
-	height:167px;
-	width:249px;
+    height: 167px;
+    width: 249px;
 }
 img.frame-7 {
-	height:295px;
-	width:216px;
+    height: 295px;
+    width: 216px;
 }
 img.frame-8 {
-	height:177px;
-	width:260px;
+    height: 177px;
+    width: 260px;
 }
 img.frame-9 {
-	height:631px;
-	width:423px;
+    height: 631px;
+    width: 423px;
 }
 img.frame-10 {
-	height:638px;
-	width:423px;
+    height: 638px;
+    width: 423px;
 }
 img.frame-11 {
-	height:349px;
-	width:225px;
+    height: 349px;
+    width: 225px;
 }
 img.frame-12 {
-	height:218px;
-	width:279px;
+    height: 218px;
+    width: 279px;
 }
 img.frame-13 {
-	height:635px;
-	width:423px;
+    height: 635px;
+    width: 423px;
 }
 img.frame-14 {
-	height:641px;
-	width:423px;
+    height: 641px;
+    width: 423px;
 }
 img.frame-15 {
-	height:357px;
-	width:251px;
+    height: 357px;
+    width: 251px;
 }
 img.frame-16 {
-	height:634px;
-	width:423px;
+    height: 634px;
+    width: 423px;
 }
 img.frame-17 {
-	height:494px;
-	width:118px;
+    height: 494px;
+    width: 118px;
 }
 img.frame-18 {
-	height:274px;
-	width:379px;
+    height: 274px;
+    width: 379px;
 }
 img.frame-19 {
-	height:521px;
-	width:380px;
+    height: 521px;
+    width: 380px;
 }
 img.frame-20 {
-	height:275px;
-	width:205px;
+    height: 275px;
+    width: 205px;
 }
 img.frame-21 {
-	height:253px;
-	width:292px;
+    height: 253px;
+    width: 292px;
 }
 img.frame-22 {
-	height:288px;
-	width:205px;
+    height: 288px;
+    width: 205px;
+}
+img.frame-23 {
+    height: 158px;
+    width: 212px;
+}
+div.frame-24 {
+    margin: 0px auto 0px auto;
+    text-align: center;
+}
+img.frame-25 {
+    height: 327px;
+    width: 433px;
+}
+img.frame-26 {
+    height: 154px;
+    width: 215px;
+}
+img.frame-27 {
+    height: 160px;
+    width: 214px;
+}
+img.frame-28 {
+    height: 144px;
+    width: 194px;
+}
+img.frame-29 {
+    height: 297px;
+    width: 400px;
+}
+img.frame-30 {
+    height: 305px;
+    width: 400px;
+}
+img.frame-31 {
+    height: 301px;
+    width: 400px;
+}
+img.frame-32 {
+    height: 299px;
+    width: 400px;
+}
+img.frame-33 {
+    height: 289px;
+    width: 400px;
 }
