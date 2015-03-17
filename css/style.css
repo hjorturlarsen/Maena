@@ -1,14 +1,85 @@
-body {
-    background-image: url("../image/strip.jpg");
-    height: 24494px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+.section {
+    background-size: 100% 100%;
+}
+#section2 {
+    background-image: url('../image/Layer 1.jpg');
+}
+#section3 {
+    background-image: url('../image/Layer 2.jpg');
+}
+#section4 {
+    background-image: url('../image/Layer 3.jpg');
+}
+#section5 {
+    background-image: url('../image/Layer 4.jpg');
+}
+#section6 {
+    background-image: url('../image/Layer 5.jpg');
+}
+#section7 {
+    background-image: url('../image/Layer 6.jpg');
+}
+#section8 {
+    background-image: url('../image/Layer 7.jpg');
+}
+#section9 {
+    background-image: url('../image/Layer 8.jpg');
+}
+#section10 {
+    background-image: url('../image/Layer 9.jpg');
+}
+#section11 {
+    background-image: url('../image/Layer 10.jpg');
+}
+#section12 {
+    background-image: url('../image/Layer 11.jpg');
+}
+#section13 {
+    background-image: url('../image/Layer 12.jpg');
+}
+#section14 {
+    background-image: url('../image/Layer 13.jpg');
+}
+#section15 {
+    background-image: url('../image/Layer 14.jpg');
+}
+#section16 {
+    background-image: url('../image/Layer 15.jpg');
+}
+#section17 {
+    background-image: url('../image/Layer 16.jpg');
+}
+#section18 {
+    background-image: url('../image/Layer 17.jpg');
+}
+#section19 {
+    background-image: url('../image/Layer 18.jpg');
+}
+#section20 {
+    background-image: url('../image/Layer 19.jpg');
+}
+#section21 {
+    background-image: url('../image/Layer 20.jpg');
+}
+#section22 {
+    background-image: url('../image/Layer 21.jpg');
+}
+#section23 {
+    background-image: url('../image/Layer 22.jpg');
+}
+#section24 {
+    background-image: url('../image/Layer 23.jpg');
 }
 
-.section {
-	height: 1080px;
-	color: #FFFFFF;
-	background-color: rgba(255, 255, 255, 0.5);
-	overflow: scroll;
+#header {
+    position: fixed;
+    height: 50px;
+    display: block;
+    width: 100%;
+    background: #333;
+    z-index: 9;
+    text-align: center;
+    color: #f2f2f2;
+    padding: 20px 0 0 0;
+    top: 0px;
 }

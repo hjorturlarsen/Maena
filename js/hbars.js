@@ -1,19 +1,28 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
-    $.get("json/maena.json", function (data, status, xhr) {
+    $.get("json/maena.json", function(data, status, xhr) {
 
-    	writeSection(data);
+        console.log("Fetching json");
+
+        writeSection(data);
 
         function writeSection(data) {
-        	var source = $("#section_template").html();
-        	var template = Handlebars.compile(source);
-        	$(".articles-container").append(template(data));
-        }
-
-        function populate_menu() { 
-            var source = $("#efnisyfirlit_template").html();
+            console.log("writing section")
+            var source = $("#section_template").html();
             var template = Handlebars.compile(source);
-            $(".dropdown-menu").append(template(data.menu_items));
+            $("#fullpage").append(template(data));
+
+            success: fullPage();
         }
     });
+
+    function fullPage() {
+        $('#fullpage').fullpage({
+            navigation: true,
+            anchors: ['sec0', 'sec1', 'sec2', 'sec3', 'sec4', 'sec5', 'sec6', 'sec7', 'sec8', 'sec9', 'sec10', 'sec11', 'sec12', 'sec13', 'sec14', 'sec15', 'sec16', 'sec17', 'sec18', 'sec19', 'sec20', 'sec21', 'sec22', 'sec23', 'sec24'],
+            css3: true,
+            fixedElements: '#header',
+            scrollOverflow:true
+        });
+    }
 });
