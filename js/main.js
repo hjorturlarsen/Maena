@@ -66,13 +66,13 @@ $(function() {
 
         function initFullpage() {
             $('#fullpage').fullpage({
-                navigation: true,
+                navigation: false,
                 anchors: ['Inngangur', 'grein1', 'grein2', 'grein3', 'grein4', 'grein5', 'grein6', 'grein7', 'grein8', 'grein9', 'grein10', 'grein11', 'grein12', 'grein13', 'grein14', 'grein15', 'grein16', 'grein17', 'grein18', 'grein19', 'grein20', 'grein21', 'grein22', 'grein23', 'grein24'],
                 css3: true,
                 fixedElements: '#header',
                 scrollOverflow: true,
                 scrollingSpeed: 1000,
-                paddingTop: '-2em',
+                autoScrolling: true,
                 onLeave: function(index, nextIndex, direction) {
                     var leavingSection = $(this);
                     if (index == 1 && direction == 'down') {
@@ -83,6 +83,8 @@ $(function() {
                     updateHeader(nextIndex);
                 }
             });
+
+             $.fn.fullpage.setAllowScrolling(false);
         }
 
         /* ---------------------------------------------- /*
@@ -90,6 +92,13 @@ $(function() {
         /* ---------------------------------------------- */
         function updateHeader(index) {
             var title = $('#section' + index).find('.title1').text()
+            console.log(index);
+            if(index == 10) {
+                header.css('font-size', '1em');
+            }
+            else {
+                header.css('font-size', '2em');
+            }
             header.text(title);
         }
 

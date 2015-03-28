@@ -6,10 +6,6 @@ html {
     width: 50%;
 }
 
-#header p {
-    font-size: 2em;
-}
-
 .container {
     margin-top: 0px;
 }
@@ -30,7 +26,8 @@ Navbar
     transition: all 0.5s ease;
 }
 
-.navbar-custom p {
+#header p {
+    font-size: 2em;
     line-height: 2em;
     vertical-align: middle;
 }
@@ -107,9 +104,7 @@ Navbar
     -moz-osx-font-smoothing: grayscale;
 }
 
-.navbar-custom .navbar-toggle .icon-bar {
-    background: #fff;
-}
+
 /* ------------------------------------------------------------------
 Sections
 ------------------------------------------------------------------- */
