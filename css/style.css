@@ -1,85 +1,211 @@
+html {
+    color: #0C090A;
+}
+
+.container {
+    width: 50%;
+}
+
+#header p {
+    font-size: 2em;
+}
+
+.container {
+    margin-top: 0px;
+}
+
+.section {
+    padding-top: 4em;
+}
+/* ------------------------------------------------------------------
+Navbar
+------------------------------------------------------------------- */
+
+.navbar-custom {
+    background-color: #FFF;
+    border: 0;
+    border-radius: 0;
+    font-family: "Roboto Condensed", sans-serif;
+    z-index: 1000;
+    transition: all 0.5s ease;
+}
+
+.navbar-custom p {
+    line-height: 2em;
+    vertical-align: middle;
+}
+
+.navbar-transparent {
+    background-color: #FFFFFF;
+    opacity: 0.98;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.62);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.62);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.62);
+    transition: all 0.5s ease;
+}
+
+.navbar-custom .dropdown-menu {
+    background: rgb(255, 255, 255);
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+}
+
+.navbar-custom .nav li > a {
+    position: relative;
+    color: #000;
+}
+
+.navbar-custom .dropdown-menu > li > a {
+    border-bottom: 1px solid rgba(73, 71, 71, 0.3) !important;
+    font-size: 11px;
+    color: #999;
+}
+
+.navbar-custom .dropdown-menu .dropdown-menu {
+    border-left: 1px solid rgba(73, 71, 71, 0.3);
+    left: 100%;
+    right: auto;
+    top: 0;
+    margin-top: 0;
+}
+
+.navbar-custom .dropdown-menu.left-side .dropdown-menu {
+    border: 0;
+    border-right: 1px solid rgba(73, 71, 71, 0.3);
+    right: 100%;
+    left: auto;
+}
+
+.navbar-custom .nav > li > a:focus,
+.navbar-custom .nav > li > a:hover,
+.navbar-custom .nav .open > a,
+.navbar-custom .nav .open > a:focus,
+.navbar-custom .nav .open > a:hover,
+.navbar-custom .dropdown-menu > li > a:focus,
+.navbar-custom .dropdown-menu > li > a:hover {
+    background: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.navbar-custom .dropdown-menu > li > a:hover {
+    background: rgba(40, 40, 40, .1) !important;
+}
+
+.navbar-custom .dropdown-toggle:after {
+    position: absolute;
+    display: block;
+    font: normal normal normal 14px/1 FontAwesome;
+    right: 0;
+    top: 50%;
+    margin-top: -6px;
+    font-size: 9px;
+    content: "\f107";
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.navbar-custom .navbar-toggle .icon-bar {
+    background: #fff;
+}
+/* ------------------------------------------------------------------
+Sections
+------------------------------------------------------------------- */
+
 .section {
     background-size: 100% 100%;
 }
+
 #section2 {
     background-image: url('../image/Layer 1.jpg');
 }
+
 #section3 {
     background-image: url('../image/Layer 2.jpg');
 }
+
 #section4 {
     background-image: url('../image/Layer 3.jpg');
 }
+
 #section5 {
     background-image: url('../image/Layer 4.jpg');
 }
+
 #section6 {
     background-image: url('../image/Layer 5.jpg');
 }
+
 #section7 {
     background-image: url('../image/Layer 6.jpg');
 }
+
 #section8 {
     background-image: url('../image/Layer 7.jpg');
 }
+
 #section9 {
     background-image: url('../image/Layer 8.jpg');
 }
+
 #section10 {
     background-image: url('../image/Layer 9.jpg');
 }
+
 #section11 {
     background-image: url('../image/Layer 10.jpg');
 }
+
 #section12 {
     background-image: url('../image/Layer 11.jpg');
 }
+
 #section13 {
     background-image: url('../image/Layer 12.jpg');
 }
+
 #section14 {
     background-image: url('../image/Layer 13.jpg');
 }
+
 #section15 {
     background-image: url('../image/Layer 14.jpg');
 }
+
 #section16 {
     background-image: url('../image/Layer 15.jpg');
 }
+
 #section17 {
     background-image: url('../image/Layer 16.jpg');
 }
+
 #section18 {
     background-image: url('../image/Layer 17.jpg');
 }
+
 #section19 {
     background-image: url('../image/Layer 18.jpg');
 }
+
 #section20 {
     background-image: url('../image/Layer 19.jpg');
 }
+
 #section21 {
     background-image: url('../image/Layer 20.jpg');
 }
+
 #section22 {
     background-image: url('../image/Layer 21.jpg');
 }
+
 #section23 {
     background-image: url('../image/Layer 22.jpg');
 }
+
 #section24 {
     background-image: url('../image/Layer 23.jpg');
-}
-
-#header {
-    position: fixed;
-    height: 50px;
-    display: block;
-    width: 100%;
-    background: #333;
-    z-index: 9;
-    text-align: center;
-    color: #f2f2f2;
-    padding: 20px 0 0 0;
-    top: 0px;
 }
