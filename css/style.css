@@ -2,8 +2,8 @@ html {
     color: #0C090A;
 }
 
-.container {
-    width: 50%;
+.fp-section {
+    height: auto !important;
 }
 
 .container {
@@ -11,7 +11,31 @@ html {
 }
 
 .section {
-    padding-top: 4em;
+    background-color: #FFF;
+}
+
+.navbar-header p {
+    margin: 0px;
+    padding: 0px;
+}
+
+#header1 {
+    font-family: "UniversLTStd-Black";
+    font-size: 2em;
+}
+
+#header2 {
+    font-family: "UniversLTStd";
+    font-size: 1em;
+}
+
+.article {
+    background-color: #FFF;
+}
+
+.article .container {
+    padding-bottom: 7em;
+    padding-top: 5em;
 }
 /* ------------------------------------------------------------------
 Navbar
@@ -24,21 +48,15 @@ Navbar
     font-family: "Roboto Condensed", sans-serif;
     z-index: 1000;
     transition: all 0.5s ease;
-}
-
-#header p {
-    font-size: 2em;
-    line-height: 2em;
-    vertical-align: middle;
+    min-height: 4.2em;
 }
 
 .navbar-transparent {
     background-color: #FFFFFF;
     opacity: 0.98;
-    -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.62);
-    -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.62);
-    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.62);
-    transition: all 0.5s ease;
+    -webkit-box-shadow: 0px -3px 17px 0px rgba(158, 158, 158, 0.62);
+    -moz-box-shadow: 0px -3px 17px 0px rgba(158, 158, 158, 0.62);
+    box-shadow: 0px -3px 17px 0px rgba(158, 158, 158, 0.62);
 }
 
 .navbar-custom .dropdown-menu {
@@ -104,7 +122,9 @@ Navbar
     -moz-osx-font-smoothing: grayscale;
 }
 
-
+.navbar-custom .navbar-toggle .icon-bar {
+    background: #0C090A;
+}
 /* ------------------------------------------------------------------
 Sections
 ------------------------------------------------------------------- */

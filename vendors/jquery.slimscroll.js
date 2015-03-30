@@ -2,13 +2,15 @@
  * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
  * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
  *
- * Version: 1.3.2 (modified for fullpage.js)
+ * Version: 1.3.2
  *
  */
 (function($) {
 
   jQuery.fn.extend({
     slimScroll: function(options) {
+
+      options = options || {};
 
       var defaults = {
 
@@ -130,7 +132,7 @@
               else if ('destroy' in options)
               {
                 // clear slimscroll mouse event listeners
-                detachWheel();
+                detachWheel.call(this);
 
                 // remove slimscroll elements
                 bar.remove();
@@ -250,24 +252,6 @@
           isOverBar = false;
         });
 
-        // allow scrolling on page load
-        // based on hack in http://stackoverflow.com/a/6593995/1547641
-        // Chrome seems to return an rgba() value while other browsers return
-        // the "transparent" value.
-        if (
-
-           me.css('background-color') == 'transparent' ||
-           me.css('background-color') == 'rgba(0, 0, 0, 0)'
-        ) {
-           isOverPanel = true;
-           showBar();
-           hideBar();
-        }
-        else {
-          isOverPanel = false;
-          hideBar();
-        }
-
         // show on parent mouseover
         me.hover(function(){
           isOverPanel = true;
@@ -291,8 +275,8 @@
           // prevent scrolling the page if necessary
           if(!releaseScroll)
           {
-  		      e.originalEvent.preventDefault();
-		      }
+            e.originalEvent.preventDefault();
+          }
           if (e.originalEvent.touches.length)
           {
             // see how far user swiped
@@ -323,7 +307,7 @@
         }
 
         // attach scroll events
-        attachWheel();
+        attachWheel.call(this);
 
         function _onWheel(e)
         {
@@ -398,27 +382,27 @@
 
         function attachWheel()
         {
-          if (window.addEventListener)
+          if (this.addEventListener)
           {
-            this.addEventListener('DOMMouseScroll', _onWheel, false );
-            this.addEventListener('mousewheel', _onWheel, false );
+            this.addEventListener('DOMMouseScroll', _onWheel, false);
+            this.addEventListener('mousewheel', _onWheel, false);
           }
           else
           {
-            document.attachEvent("onmousewheel", _onWheel)
+            this.attachEvent('onmousewheel', _onWheel);
           }
         }
 
         function detachWheel()
         {
-          if (window.removeEventListener)
+          if (this.removeEventListener)
           {
             this.removeEventListener('DOMMouseScroll', _onWheel);
             this.removeEventListener('mousewheel', _onWheel);
           }
           else
           {
-            document.detachEvent('onmousewheel', _onWheel);
+            this.detachEvent('onmousewheel', _onWheel);
           }
         }
 

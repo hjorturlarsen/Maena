@@ -7,7 +7,8 @@ $(function() {
         /* ---------------------------------------------- */
 
         var navbar = $('.navbar-custom'),
-            header = $('.navbar-header p'),
+            header1 = $('#header1'),
+            header2 = $('#header2'),
             navHeight = navbar.height(),
             width = Math.max($(window).width(), window.innerWidth),
             mobileTest;
@@ -44,7 +45,7 @@ $(function() {
             console.log("Writing HTML")
             var source = $("#article_template").html();
             var template = Handlebars.compile(source);
-            $("#articles").append(template(data));
+            $("#fullpage").append(template(data));
 
             return $.ajax();
         }
@@ -66,13 +67,41 @@ $(function() {
 
         function initFullpage() {
             $('#fullpage').fullpage({
-                navigation: false,
-                anchors: ['Inngangur', 'grein1', 'grein2', 'grein3', 'grein4', 'grein5', 'grein6', 'grein7', 'grein8', 'grein9', 'grein10', 'grein11', 'grein12', 'grein13', 'grein14', 'grein15', 'grein16', 'grein17', 'grein18', 'grein19', 'grein20', 'grein21', 'grein22', 'grein23', 'grein24'],
+                anchors: ['grein0', 'grein1', 'grein2', 'grein3', 'grein4', 'grein5', 'grein6', 'grein7', 'grein8', 'grein9', 'grein10', 'grein11', 'grein12', 'grein13', 'grein14', 'grein15', 'grein16', 'grein17', 'grein18', 'grein19', 'grein20', 'grein21', 'grein22', 'grein23', 'grein24'],
+
+                //Scrolling
                 css3: true,
-                fixedElements: '#header',
+                scrollingSpeed: 700,
+                autoScrolling: false,
+                fitToSection: true,
+                scrollBar: false,
+                easing: 'easeInOutCubic',
+                easingcss3: 'ease',
+                loopTop: false,
+                loopHorizontal: false,
+                continuousVertical: false,
+                normalScrollElements: '.article',
+                touchSensitivity: 15,
+                normalScrollElementTouchThreshold: 5,
                 scrollOverflow: true,
-                scrollingSpeed: 1000,
-                autoScrolling: true,
+
+                //Accessibility
+                keyboardScrolling: true,
+                animateAnchor: true,
+                recordHistory: true,
+
+                //Design
+                controlArrows: true,
+                verticalCentered: true,
+                resize: false,
+                fixedElements: '#header',
+                responsive: 0,
+
+                //Custom selectors
+                sectionSelector: '.section',
+                slideSelector: '.slide',
+
+                //events
                 onLeave: function(index, nextIndex, direction) {
                     var leavingSection = $(this);
                     if (index == 1 && direction == 'down') {
@@ -81,25 +110,33 @@ $(function() {
                         fixNavbar(false);
                     }
                     updateHeader(nextIndex);
+                },
+                afterLoad: function(anchorLink, index) {},
+                afterRender: function() {},
+                afterResize: function() {},
+                afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
+                },
+                onSlideLeave: function(anchorLink, index, slideIndex, direction) {
                 }
             });
-
-             $.fn.fullpage.setAllowScrolling(false);
         }
 
         /* ---------------------------------------------- /*
          * Update header according to article
         /* ---------------------------------------------- */
         function updateHeader(index) {
-            var title = $('#section' + index).find('.title1').text()
+            var title1 = $('#section' + index).find('.title1').text();
+            var title2 = $('#section' + index).find('.title2').text();
             console.log(index);
-            if(index == 10) {
-                header.css('font-size', '1em');
+            if (index == 10) {
+                header1.css('font-size', '1.5em');
+            } else {
+                header1.css('font-size', '2em');
             }
-            else {
-                header.css('font-size', '2em');
-            }
-            header.text(title);
+            console.log(header1.text());
+            console.log(header2.text());
+            header1.text(title1);
+            header2.text(title2);
         }
 
 

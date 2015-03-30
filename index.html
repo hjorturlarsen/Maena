@@ -21,10 +21,9 @@
     <!--********** SCRIPTS **********-->
     <script type="text/javascript" src="js/jquery-2.1.3.js"></script>
     <script type="text/javascript" src="js/jquery.fullPage.js"></script>
-    <script type="text/javascript" src="vendors/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="vendors/jquery.slimscroll.js"></script>
     <script type="text/javascript" src="js/handlebars-v3.0.0.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/fitText.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 
@@ -32,27 +31,31 @@
     <nav class="navbar navbar-custom navbar-fixed-top" id="header" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <p class="Heiti-greinar">Mæna</p>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <p id="header1">Mæna</p>
+                <p id="header2"></p>
             </div>
-
             <div class="collapse navbar-collapse" id="custom-collapse">
                 <ul class="nav navbar-nav navbar-right">
-
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Efnisyfirlit</a>
                         <ul class="dropdown-menu" id="menu_handlebars">
                             <script type="text/x-handlebars-template" id="menu_template">
-                            {{#each this}}
-                            <li>
-                                <a href="#grein{{@index}}">
-                                    {{this}}
-                                </a>
-                            </li>
-                            {{/each}}
+                                <li>
+                                    <a href="#Inngangur">Inngangur</a>
+                                    {{#each this}}
+                                    <a href="#grein{{@index}}">{{this}}</a>
+                                    {{/each}}
+                                </li>
+                                
                             </script>
                         </ul>
                     </li>
-
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Safn</a>
                         <ul class="dropdown-menu">
@@ -62,76 +65,47 @@
                             <li><a href="#">Mæna 2011</a></li>
                             <li><a href="#">Mæna 2010</a></li>
                         </ul>
-                        
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!--<div id="header">
-        <div class="container">
-            <div class="row">
-            <div class="col-md-8">Mæna</div>
-            <div class="col-md-2">Efnisyfirlit</div>
-            <div class="col-md-2">Safn</div>
-        </div>
-        </div>
-    </div>-->
     <div id="fullpage">
-        <div id="articles">
-            <script type="text/x-handlebars-template" id="article_template" data-anchor="sec{{@index}}">
-                {{#each this}} {{#if content}}
-                <div class="section" id="section{{@index}}">
-                    <div class="container">
-                        <div class="title1" id="title1-{{@index}}" style="display: none;">{{{this.title1}}}</div>
-                        {{#if title2}}
-                        <div class="title2" id="title2-{{@index}}">{{{this.title2}}}</div>
-                        {{/if}}
-                        <div clas="content" id="content-{{@index}}">{{{this.content}}}</div>
-                        {{#if image1}}
-                        <div class="article-image" id="image1-{{@index}}">{{{this.image1}}}</div>
-                        {{/if}} {{#if caption1}}
-                        <div class="caption" id="caption1-{{@index}}">{{{this.caption1}}}</div>
-                        {{/if}} {{#if image2}}
-                        <div class="article-image" id="image2-{{@index}}">{{{this.image2}}}</div>
-                        {{/if}} {{#if caption2}}
-                        <div class="caption" id="caption2-{{@index}}">{{{this.caption2}}}</div>
-                        {{/if}} {{#if image3}}
-                        <div class="article-image" id="image3-{{@index}}">{{{this.image3}}}</div>
-                        {{/if}} {{#if caption3}}
-                        <div class="caption" id="caption3-{{@index}}">{{{this.caption3}}}</div>
-                        {{/if}} {{#if image4}}
-                        <div class="article-image" id="image4-{{@index}}">{{{this.image4}}}</div>
-                        {{/if}} {{#if image5}}
-                        <div class="article-image" id="image5-{{@index}}">{{{this.image5}}}</div>
-                        {{/if}} {{#if image6}}
-                        <div class="article-image" id="image6-{{@index}}">{{{this.image6}}}</div>
-                        {{/if}} {{#if image7}}
-                        <div class="article-image" id="image7-{{@index}}">{{{this.image7}}}</div>
-                        {{/if}} {{#if image8}}
-                        <div class="article-image" id="image8-{{@index}}">{{{this.image8}}}</div>
-                        {{/if}} {{#if image9}}
-                        <div class="article-image" id="image9-{{@index}}">{{{this.image9}}}</div>
-                        {{/if}} {{#if footnotes}}
-                        <div class="footnotes" id="footnote-{{@index}}">{{{this.footnotes}}}</div>
-                        {{/if}} {{#if author}}
-                        <div class="author" id="author-{{@index}}">{{{this.author}}}</div>
-                        {{/if}}
+        <script type="text/x-handlebars-template" id="article_template">
+            {{#each this}} {{#if entry}}
+            <div class="section" id="section{{@index}}">
+                <div class="title1" id="title1-{{@index}}" style="display: none;">
+                    {{{this.title1}}}
+                </div>
+                <div class="container">
+                    <div class="entry">
+                        {{{this.entry}}}
                     </div>
                 </div>
-                {{/if}} {{/each}}
-            </script>
-        </div>
+            </div>
+            {{/if}} {{#if content}}
+            <div class="section" id="section{{@index}}">
+                <div class="slide">
+                </div>
+                <div class="slide article" id="slide{{@index}}">
+                    <div class="container">
+                        <div class="title1" id="title1-{{@index}}">
+                            {{{this.title1}}}
+                        </div>
+                        {{#if title2}}
+                        <div class="title2" id="title2-{{@index}}">
+                            {{{this.title2}}}
+                        </div>
+                        {{/if}}
+                        <div class="content" id="content-{{@index}}">
+                            {{{this.content}}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/if}} {{/each}}
+        </script>
     </div>
 </body>
 
 </html>
-<!--
-<script type="text/x-handlebars-template" id="efnisyfirlit_template">
-{{#each this}}
-<li>
-<a href="#">{{this}}</a>
-</li>
-{{/each}}
-</script>
--->
