@@ -73,7 +73,7 @@ $(function() {
                 css3: true,
                 scrollingSpeed: 700,
                 autoScrolling: false,
-                fitToSection: true,
+                fitToSection: false,
                 scrollBar: false,
                 easing: 'easeInOutCubic',
                 easingcss3: 'ease',
@@ -95,7 +95,7 @@ $(function() {
                 verticalCentered: true,
                 resize: false,
                 fixedElements: '#header',
-                responsive: 0,
+                responsive: 900,
 
                 //Custom selectors
                 sectionSelector: '.section',
@@ -115,9 +115,32 @@ $(function() {
                 afterRender: function() {},
                 afterResize: function() {},
                 afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
+                    if (slideIndex >= 1) {
+                        console.log('fitToSection')
+                        $.fn.fullpage.setFitToSection(true);
+                        $(window).trigger("scroll");
+                    }
+                    console.log("slideLoad");
                 },
                 onSlideLeave: function(anchorLink, index, slideIndex, direction) {
+                    if (slideIndex == 1) {
+                        $.fn.fullpage.setFitToSection(false);
+                    }
+                    console.log('onSlideLeave');
                 }
+            });
+
+            $('.article').on({
+                'mousewheel': function(e) {
+                    if (e.target.id == 'el') return;
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+            });
+
+            $('.article').on('touchstart touchmove', function(e) {
+                //prevent native touch activity like scrolling
+                e.preventDefault();
             });
         }
 
@@ -127,14 +150,11 @@ $(function() {
         function updateHeader(index) {
             var title1 = $('#section' + index).find('.title1').text();
             var title2 = $('#section' + index).find('.title2').text();
-            console.log(index);
             if (index == 10) {
                 header1.css('font-size', '1.5em');
             } else {
                 header1.css('font-size', '2em');
             }
-            console.log(header1.text());
-            console.log(header2.text());
             header1.text(title1);
             header2.text(title2);
         }
