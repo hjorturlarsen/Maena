@@ -37,6 +37,27 @@ html {
     padding-bottom: 7em;
     padding-top: 5em;
 }
+
+.article-icon {
+    width: 4em;
+    height: auto;
+    float: right;
+    margin: 1em;
+    cursor: pointer;
+}
+
+.content-icon {
+    width: 4em;
+    height: auto;
+    float: left;
+    margin: 1em;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -38px;
+}
+
+
 /* ------------------------------------------------------------------
 Navbar
 ------------------------------------------------------------------- */

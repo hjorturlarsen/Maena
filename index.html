@@ -12,6 +12,10 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="fancybox/source/jquery.fancybox.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="fancybox/source/helpers/jquery.fancybox-buttons.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="fancybox/source/helpers/jquery.fancybox-thumbs.css" media="screen" />
+
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js">
       </script>
@@ -19,11 +23,16 @@
       </script>
     <![endif]-->
     <!--********** SCRIPTS **********-->
+
     <script type="text/javascript" src="js/jquery-2.1.3.js"></script>
     <script type="text/javascript" src="js/jquery.fullPage.js"></script>
     <script type="text/javascript" src="vendors/jquery.slimscroll.js"></script>
     <script type="text/javascript" src="js/handlebars-v3.0.0.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+    <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js"></script>
+    <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 
@@ -48,10 +57,8 @@
                             <script type="text/x-handlebars-template" id="menu_template">
                                 <li>
                                     {{#each this}}
-                                    <a href="#grein{{@index}}">{{this}}</a>
-                                    {{/each}}
+                                    <a href="#grein{{@index}}">{{this}}</a> {{/each}}
                                 </li>
-                                
                             </script>
                         </ul>
                     </li>
@@ -85,8 +92,10 @@
             {{/if}} {{#if content}}
             <div class="section" id="section{{@index}}">
                 <div class="slide">
+                    <img class="article-icon" src="/image/icons/article.png">
                 </div>
                 <div class="slide article" id="slide{{@index}}">
+                    <img class="content-icon" src="/image/icons/contents.png">
                     <div class="container">
                         <div class="title1" id="title1-{{@index}}">
                             {{{this.title1}}}
@@ -98,6 +107,9 @@
                         {{/if}}
                         <div class="content" id="content-{{@index}}">
                             {{{this.content}}}
+                        </div>
+                        <div class="footnotes">
+                            {{{this.footnotes}}}
                         </div>
                     </div>
                 </div>

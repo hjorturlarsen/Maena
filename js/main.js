@@ -3,7 +3,7 @@ $(function() {
     $(document).ready(function() {
 
         /* ---------------------------------------------- /*
-         * Initialize some key variables and start scripts
+         * Initialize some key variables
         /* ---------------------------------------------- */
 
         var navbar = $('.navbar-custom'),
@@ -17,6 +17,26 @@ $(function() {
             mobileTest = true;
         }
 
+        $(".fancybox").fancybox({
+                padding: 0,
+
+                openEffect : 'elastic',
+                openSpeed  : 150,
+
+                closeEffect : 'elastic',
+                closeSpeed  : 150,
+
+                closeClick : true,
+
+                helpers : {
+                    overlay : {
+                        css : {
+                            'background' : 'rgba(0,0,0,0.85)'
+                        }
+                    }
+                }
+            });
+
         $(window).resize(function() {
             var width = Math.max($(window).width(), window.innerWidth);
             hoverDropdown(width, mobileTest);
@@ -28,7 +48,6 @@ $(function() {
         /* ---------------------------------------------- */
 
         function getData() {
-            console.log('fetching data');
             $.get('json/maena.json', function(data) {
                 success: writeArticles(data).done(function() {
                     initFullpage();
@@ -42,7 +61,6 @@ $(function() {
         /* ---------------------------------------------- */
 
         function writeArticles(data) {
-            console.log("Writing HTML")
             var source = $("#article_template").html();
             var template = Handlebars.compile(source);
             $("#fullpage").append(template(data));
@@ -55,7 +73,6 @@ $(function() {
         /* ---------------------------------------------- */
 
         function writeMenu(data) {
-            console.log('writing menu');
             var source = $('#menu_template').html();
             var template = Handlebars.compile(source);
             $('#menu_handlebars').append(template(data.menu_items));
@@ -91,7 +108,7 @@ $(function() {
                 recordHistory: true,
 
                 //Design
-                controlArrows: true,
+                controlArrows: false,
                 verticalCentered: true,
                 resize: false,
                 fixedElements: '#header',
@@ -116,31 +133,28 @@ $(function() {
                 afterResize: function() {},
                 afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
                     if (slideIndex >= 1) {
-                        console.log('fitToSection')
                         $.fn.fullpage.setFitToSection(true);
                         $(window).trigger("scroll");
                     }
-                    console.log("slideLoad");
                 },
                 onSlideLeave: function(anchorLink, index, slideIndex, direction) {
                     if (slideIndex == 1) {
                         $.fn.fullpage.setFitToSection(false);
                     }
-                    console.log('onSlideLeave');
                 }
             });
 
-            $('.article').on({
-                'mousewheel': function(e) {
-                    if (e.target.id == 'el') return;
-                    e.preventDefault();
-                    e.stopPropagation();
-                }
-            });
-
-            $('.article').on('touchstart touchmove', function(e) {
-                //prevent native touch activity like scrolling
+            $('.article').on('mousewheel', function(e) {
                 e.preventDefault();
+                e.stopPropagation();
+            });
+
+            $('.article-icon').click(function() {
+                $.fn.fullpage.moveSlideRight();
+            });
+
+            $('.content-icon').click(function() {
+                $.fn.fullpage.moveSlideLeft();
             });
         }
 

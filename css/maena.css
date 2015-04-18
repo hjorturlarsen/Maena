@@ -2,39 +2,51 @@
     font-family: "Acta Display Bold";
     src: url("../fonts/ActaDisplay-Black.otf");
 }
+
 @font-face {
     font-family: "Acta Display Black";
     src: url("../fonts/ActaDisplay-Black.otf");
 }
+
 @font-face {
     font-family: "Acta Deck Bold";
     src: url("../fonts/ActaDeck-Bold.otf");
 }
+
 @font-face {
     font-family: "UniversLTStd";
     src: url("../fonts/UniversLTStd.otf");
 }
+
 @font-face {
     font-family: "UniversLTStd-Black";
     src: url("../fonts/UniversLTStd-Black.otf");
 }
+
 @font-face {
     font-family: "UniversLTStd-XBlack";
     src: url("../fonts/UniversLTStd-XBlack.otf");
 }
+
 @font-face {
     font-family: "Windings";
     src: url("../fonts/Windings.ttf");
 }
+
 @font-face {
     font-family: "Everson Mono";
     src: url("../fonts/Everson Mono.ttf");
 }
+
+div.square {
+    max-width: 15em;
+    margin: 1em;
+}
+
 p.Heiti-greinar {
-    -epub-ruby-position: over;
     color: #000000;
     font-family: "Acta Display Bold", serif;
-    font-size: 88px;
+    font-size: 5em;
     font-variant: normal;
     font-weight: bold;
     line-height: 1.114;
@@ -45,25 +57,30 @@ p.Heiti-greinar {
     text-decoration: none;
     text-indent: 0px;
 }
+
 p.Hofundur {
-    -epub-ruby-position: over;
     color: #000000;
     font-family: "UniversLTStd", sans-serif;
     font-size: 18px;
     font-style: normal;
     font-variant: normal;
     font-weight: 950;
-    line-height: 1.5;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
     text-align: left;
     text-decoration: none;
-    text-indent: 0px;
 }
+
+.title2 {
+    margin-bottom: 2em;
+}
+
+img.Hofundur {
+    width: 1em;
+    margin-right: 1em;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
 p.Meginmal {
-    -epub-hyphens: none;
-    -epub-ruby-position: over;
     color: #000000;
     font-family: "UniversLTStd", sans-serif;
     font-size: 18px;
@@ -78,6 +95,7 @@ p.Meginmal {
     text-decoration: none;
     text-indent: 0px;
 }
+
 p.x-bein-tilvitnun {
     -epub-hyphens: none;
     -epub-ruby-position: over;
@@ -95,6 +113,7 @@ p.x-bein-tilvitnun {
     text-decoration: none;
     text-indent: 0px;
 }
+
 p.Millifyrirs-gn {
     -epub-ruby-position: over;
     color: #000000;
@@ -110,6 +129,7 @@ p.Millifyrirs-gn {
     text-decoration: none;
     text-indent: 0px;
 }
+
 p.Pull-Quote {
     -epub-ruby-position: over;
     color: #000000;
@@ -126,6 +146,11 @@ p.Pull-Quote {
     text-decoration: none;
     text-indent: 0px;
 }
+
+p.Nedanmalsgrein {
+    
+}
+
 span.Footnote-reference {
     font-family: "UniversLTStd", sans-serif;
     font-size: 10px;
@@ -133,6 +158,7 @@ span.Footnote-reference {
     font-variant: normal;
     font-weight: bold;
 }
+
 span.footnote-reference--nedanmals-tolustafur {
     font-family: "UniversLTStd", sans-serif;
     font-size: 12px;
@@ -140,273 +166,377 @@ span.footnote-reference--nedanmals-tolustafur {
     font-variant: normal;
     font-weight: bold;
 }
+
 span.Skaletur {
     font-style: oblique;
     font-weight: bold;
 }
+
 span.Skaletur-nedanmalsgreinar {
     font-style: oblique;
     font-weight: normal;
 }
+
 span.Feitletur {
     font-style: normal;
     font-weight: normal;
 }
+
 span.Bold {
     font-style: normal;
     font-weight: bold;
 }
+
 p.para-style-override-1 {
     -epub-hyphens: none;
     font-size: 72px;
     font-style: normal;
     font-weight: normal;
 }
+
 p.para-style-override-2 {
     font-style: normal;
     font-weight: normal;
 }
+
 p.para-style-override-3 {
     text-align: center;
 }
+
 p.para-style-override-4 {
     margin-left: 43px;
 }
+
 p.para-style-override-5 {
     text-align: right;
 }
+
 p.para-style-override-6 {
     font-family: "Acta Display Black", serif;
     font-style: normal;
     font-weight: normal;
 }
+
 p.para-style-override-7 {
     font-size: 25px;
-    font-style: italic;
     font-weight: bold;
-    text-align: center;
 }
+
 p.para-style-override-8 {
     font-style: oblique;
     font-weight: normal;
 }
+
 p.para-style-override-9 {
     -epub-hyphens: none;
 }
+
 p.para-style-override-10 {
     font-size: 14px;
 }
+
 p.para-style-override-11 {
     font-style: normal;
     font-weight: bold;
 }
+
 p.para-style-override-12 {
     margin-left: 0px;
 }
+
 p.para-style-override-13 {
     font-size: 72px;
     font-style: normal;
     font-weight: normal;
 }
+
 p.para-style-override-14 {
     margin-right: 43px;
 }
+
 p.para-style-override-15 {
     -epub-hyphens: none;
     font-style: normal;
     font-weight: bold;
 }
+
 p.para-style-override-16 {
     break-after: column;
 }
+
 p.para-style-override-17 {
     margin-left: 20px;
 }
+
 span.char-style-override-1 {
-	font-family: "UniversLTStd-XBlack";
+    font-family: "UniversLTStd-XBlack";
 }
+
 span.char-style-override-2 {
     font-family: "UniversLTStd";
+    font-weight: lighter;
 }
+
 span.char-style-override-3 {
     font-style: italic;
     font-weight: normal;
 }
+
 span.char-style-override-7 {
-    font-family:"Everson Mono", serif;
-    font-style:normal;
-    font-weight:bold;
+    font-family: "Everson Mono", serif;
+    font-style: normal;
+    font-weight: bold;
 }
-span.char-style-override-5 {
-}
+
+span.char-style-override-5 {}
+
 span.char-style-override-6 {
     font-size: 18px;
 }
+
 span.char-style-override-7 {
     font-size: 18px;
     text-decoration: underline;
 }
+
 span.char-style-override-8 {
     font-style: oblique;
     font-weight: normal;
 }
+
 span.char-style-override-9 {
     font-style: normal;
     font-weight: bold;
 }
+
 span.char-style-override-10 {
     font-size: 7px;
     vertical-align: super;
 }
+
 span.char-style-override-11 {
     font-size: 14px;
     font-style: normal;
     font-weight: normal;
 }
+
 span.char-style-override-12 {
     font-family: Wingdings, sans-serif;
     font-style: normal;
     font-weight: normal;
 }
+
 span.char-style-override-13 {
     font-style: oblique;
     font-weight: bold;
 }
+
 span.char-style-override-14 {
     color: #ee2624;
 }
+
 span.char-style-override-15 {
     font-size: 6px;
 }
-img.frame-1 {
-    height: 278px;
-    width: 218px;
+
+.image {
+    display: table;
 }
+
+.caption {
+    display: table-caption;
+    caption-side: bottom;
+}
+
+.floatRight {
+    float: right;
+    margin: 1em;
+}
+
+.floatLeft {
+    float: left;
+    margin: 1em;
+}
+
+img.floatLeft,
+div.floatLeft {
+    margin-left: 0em;
+}
+
+img.floatRight,
+div.floatRight {
+    margin-right: 0em;
+}
+
+img.frame-1 {
+    height: 25em;
+    width: auto;
+}
+
+/*
 div.frame-2 {
     margin: 0px auto 0px auto;
     text-align: center;
 }
+
 img.frame-3 {
     height: 161px;
-    width: 169px;
+    width: auto;
 }
+
 img.frame-4 {
     height: 162px;
-    width: 169px;
+    width: auto;
 }
+*/
+
 img.frame-5 {
-    height: 175px;
-    width: 336px;
+    height: 20em;
+    width: auto;
 }
+
 img.frame-6 {
-    height: 167px;
-    width: 249px;
+    height: 25em;
+    width: auto;
 }
+
 img.frame-7 {
-    height: 295px;
-    width: 216px;
+    height: 30em;
+    width: auto;
 }
+
 img.frame-8 {
-    height: 177px;
-    width: 260px;
+    height: 20em;
+    width: auto;
 }
+
 img.frame-9 {
-    height: 631px;
-    width: 423px;
+    height: 55em;
+    width: auto;
 }
+
 img.frame-10 {
-    height: 638px;
-    width: 423px;
+    height: 55em;
+    width: auto;
 }
+
 img.frame-11 {
-    height: 349px;
-    width: 225px;
+    height: 35em;
+    width: auto;
 }
+
 img.frame-12 {
-    height: 218px;
-    width: 279px;
+    height: 20em;
+    width: auto;
 }
+
 img.frame-13 {
-    height: 635px;
-    width: 423px;
+    height: 50em;
+    width: auto;
 }
+
 img.frame-14 {
-    height: 641px;
-    width: 423px;
+    height: 60em;
+    width: auto;
 }
+
 img.frame-15 {
     height: 357px;
-    width: 251px;
+    width: auto;
 }
+
 img.frame-16 {
     height: 634px;
-    width: 423px;
+    width: auto;
 }
+
 img.frame-17 {
     height: 494px;
-    width: 118px;
+    width: auto;
 }
+
 img.frame-18 {
     height: 274px;
-    width: 379px;
+    width: auto;
 }
+
 img.frame-19 {
     height: 521px;
-    width: 380px;
+    width: auto;
 }
+
 img.frame-20 {
     height: 275px;
-    width: 205px;
+    width: auto;
 }
+
 img.frame-21 {
     height: 253px;
-    width: 292px;
+    width: auto;
 }
+
 img.frame-22 {
     height: 288px;
-    width: 205px;
+    width: auto;
 }
+
 img.frame-23 {
     height: 40%;
-    width: 40%;
+    width: auto;
 }
+
 img.frame-24 {
     height: 40%;
-    width: 40%;
+    width: auto;
 }
+
 div.frame-24 {
     margin: 0px auto 0px auto;
     text-align: center;
 }
+
 img.frame-25 {
-    height:320px;
-    width:418px;
+    height: 320px;
+    width: auto;
 }
+
 img.frame-26 {
-    height:40%;
-    width:40%;
+    height: 40%;
+    width: auto;
 }
+
 img.frame-27 {
-    height:320px;
-    width:351px;
+    height: 320px;
+    width: auto;
 }
+
 img.frame-28 {
-    height:300px;
-    width:430px;
+    height: 300px;
+    width: auto;
 }
+
 img.frame-29 {
-    height:305px;
-    width:351px;
+    height: 305px;
+    width: auto;
 }
+
 img.frame-30 {
-    height:300px;
-    width:400px;
+    height: 300px;
+    width: auto;
 }
+
 img.frame-31 {
-    height:299px;
-    width:400px;
+    height: 299px;
+    width: auto;
 }
+
 img.frame-32 {
-    height:301px;
-    width:400px;
+    height: 301px;
+    width: auto;
+}
+
+/* Smartphones (portrait) ----------- */
+
+@media only screen and (max-width: 320px) {
+    /* Styles */
 }
