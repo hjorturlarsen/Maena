@@ -89,7 +89,7 @@ $(function() {
                 //Scrolling
                 css3: true,
                 scrollingSpeed: 700,
-                autoScrolling: false,
+                autoScrolling: true,
                 fitToSection: false,
                 scrollBar: false,
                 easing: 'easeInOutCubic',
