@@ -56,8 +56,6 @@ html {
     top: 50%;
     margin-top: -38px;
 }
-
-
 /* ------------------------------------------------------------------
 Navbar
 ------------------------------------------------------------------- */
@@ -154,98 +152,464 @@ Sections
     background-size: 100% 100%;
 }
 
-#section2 {
-    background-image: url('../image/Layer 1.jpg');
+@media (min-width: 320px) {
+    /* smartphones, iPhone, portrait 480x320 phones */
+    
+    #section2 {
+        background-image: url('../image/background/320/Layer 1.jpg');
+    }
+    #section3 {
+        background-image: url('../image/background/320/Layer 2.jpg');
+    }
+    #section4 {
+        background-image: url('../image/background/320/Layer 3.jpg');
+    }
+    #section5 {
+        background-image: url('../image/background/320/Layer 4.jpg');
+    }
+    #section6 {
+        background-image: url('../image/background/320/Layer 5.jpg');
+    }
+    #section7 {
+        background-image: url('../image/background/320/Layer 6.jpg');
+    }
+    #section8 {
+        background-image: url('../image/background/320/Layer 7.jpg');
+    }
+    #section9 {
+        background-image: url('../image/background/320/Layer 8.jpg');
+    }
+    #section10 {
+        background-image: url('../image/background/320/Layer 9.jpg');
+    }
+    #section11 {
+        background-image: url('../image/background/320/Layer 10.jpg');
+    }
+    #section12 {
+        background-image: url('../image/background/320/Layer 11.jpg');
+    }
+    #section13 {
+        background-image: url('../image/background/320/Layer 12.jpg');
+    }
+    #section14 {
+        background-image: url('../image/background/320/Layer 13.jpg');
+    }
+    #section15 {
+        background-image: url('../image/background/320/Layer 14.jpg');
+    }
+    #section16 {
+        background-image: url('../image/background/320/Layer 15.jpg');
+    }
+    #section17 {
+        background-image: url('../image/background/320/Layer 16.jpg');
+    }
+    #section18 {
+        background-image: url('../image/background/320/Layer 17.jpg');
+    }
+    #section19 {
+        background-image: url('../image/background/320/Layer 18.jpg');
+    }
+    #section20 {
+        background-image: url('../image/background/320/Layer 19.jpg');
+    }
+    #section21 {
+        background-image: url('../image/background/320/Layer 20.jpg');
+    }
+    #section22 {
+        background-image: url('../image/background/320/Layer 21.jpg');
+    }
+    #section23 {
+        background-image: url('../image/background/320/Layer 22.jpg');
+    }
+    #section24 {
+        background-image: url('../image/background/320/Layer 23.jpg');
+    }
+    #section25 {
+        background-image: url('../image/background/320/Layer 24.jpg');
+    }
 }
 
-#section3 {
-    background-image: url('../image/Layer 2.jpg');
+@media (min-width: 481px) {
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+    
+    #section2 {
+        background-image: url('../image/background/640/Layer 1.jpg');
+    }
+    #section3 {
+        background-image: url('../image/background/640/Layer 2.jpg');
+    }
+    #section4 {
+        background-image: url('../image/background/640/Layer 3.jpg');
+    }
+    #section5 {
+        background-image: url('../image/background/640/Layer 4.jpg');
+    }
+    #section6 {
+        background-image: url('../image/background/640/Layer 5.jpg');
+    }
+    #section7 {
+        background-image: url('../image/background/640/Layer 6.jpg');
+    }
+    #section8 {
+        background-image: url('../image/background/640/Layer 7.jpg');
+    }
+    #section9 {
+        background-image: url('../image/background/640/Layer 8.jpg');
+    }
+    #section10 {
+        background-image: url('../image/background/640/Layer 9.jpg');
+    }
+    #section11 {
+        background-image: url('../image/background/640/Layer 10.jpg');
+    }
+    #section12 {
+        background-image: url('../image/background/640/Layer 11.jpg');
+    }
+    #section13 {
+        background-image: url('../image/background/640/Layer 12.jpg');
+    }
+    #section14 {
+        background-image: url('../image/background/640/Layer 13.jpg');
+    }
+    #section15 {
+        background-image: url('../image/background/640/Layer 14.jpg');
+    }
+    #section16 {
+        background-image: url('../image/background/640/Layer 15.jpg');
+    }
+    #section17 {
+        background-image: url('../image/background/640/Layer 16.jpg');
+    }
+    #section18 {
+        background-image: url('../image/background/640/Layer 17.jpg');
+    }
+    #section19 {
+        background-image: url('../image/background/640/Layer 18.jpg');
+    }
+    #section20 {
+        background-image: url('../image/background/640/Layer 19.jpg');
+    }
+    #section21 {
+        background-image: url('../image/background/640/Layer 20.jpg');
+    }
+    #section22 {
+        background-image: url('../image/background/640/Layer 21.jpg');
+    }
+    #section23 {
+        background-image: url('../image/background/640/Layer 22.jpg');
+    }
+    #section24 {
+        background-image: url('../image/background/640/Layer 23.jpg');
+    }
+    #section25 {
+        background-image: url('../image/background/640/Layer 24.jpg');
+    }
 }
 
-#section4 {
-    background-image: url('../image/Layer 3.jpg');
+@media (min-width: 641px) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    
+    #section2 {
+        background-image: url('../image/background/480/Layer 1.jpg');
+    }
+    #section3 {
+        background-image: url('../image/background/480/Layer 2.jpg');
+    }
+    #section4 {
+        background-image: url('../image/background/480/Layer 3.jpg');
+    }
+    #section5 {
+        background-image: url('../image/background/480/Layer 4.jpg');
+    }
+    #section6 {
+        background-image: url('../image/background/480/Layer 5.jpg');
+    }
+    #section7 {
+        background-image: url('../image/background/480/Layer 6.jpg');
+    }
+    #section8 {
+        background-image: url('../image/background/480/Layer 7.jpg');
+    }
+    #section9 {
+        background-image: url('../image/background/480/Layer 8.jpg');
+    }
+    #section10 {
+        background-image: url('../image/background/480/Layer 9.jpg');
+    }
+    #section11 {
+        background-image: url('../image/background/480/Layer 10.jpg');
+    }
+    #section12 {
+        background-image: url('../image/background/480/Layer 11.jpg');
+    }
+    #section13 {
+        background-image: url('../image/background/480/Layer 12.jpg');
+    }
+    #section14 {
+        background-image: url('../image/background/480/Layer 13.jpg');
+    }
+    #section15 {
+        background-image: url('../image/background/480/Layer 14.jpg');
+    }
+    #section16 {
+        background-image: url('../image/background/480/Layer 15.jpg');
+    }
+    #section17 {
+        background-image: url('../image/background/480/Layer 16.jpg');
+    }
+    #section18 {
+        background-image: url('../image/background/480/Layer 17.jpg');
+    }
+    #section19 {
+        background-image: url('../image/background/480/Layer 18.jpg');
+    }
+    #section20 {
+        background-image: url('../image/background/480/Layer 19.jpg');
+    }
+    #section21 {
+        background-image: url('../image/background/480/Layer 20.jpg');
+    }
+    #section22 {
+        background-image: url('../image/background/480/Layer 21.jpg');
+    }
+    #section23 {
+        background-image: url('../image/background/480/Layer 22.jpg');
+    }
+    #section24 {
+        background-image: url('../image/background/480/Layer 23.jpg');
+    }
+    #section25 {
+        background-image: url('../image/background/480/Layer 24.jpg');
+    }
 }
 
-#section5 {
-    background-image: url('../image/Layer 4.jpg');
+@media (min-width: 961px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    
+    #section2 {
+        background-image: url('../image/background/960/Layer 1.jpg');
+    }
+    #section3 {
+        background-image: url('../image/background/960/Layer 2.jpg');
+    }
+    #section4 {
+        background-image: url('../image/background/960/Layer 3.jpg');
+    }
+    #section5 {
+        background-image: url('../image/background/960/Layer 4.jpg');
+    }
+    #section6 {
+        background-image: url('../image/background/960/Layer 5.jpg');
+    }
+    #section7 {
+        background-image: url('../image/background/960/Layer 6.jpg');
+    }
+    #section8 {
+        background-image: url('../image/background/960/Layer 7.jpg');
+    }
+    #section9 {
+        background-image: url('../image/background/960/Layer 8.jpg');
+    }
+    #section10 {
+        background-image: url('../image/background/960/Layer 9.jpg');
+    }
+    #section11 {
+        background-image: url('../image/background/960/Layer 10.jpg');
+    }
+    #section12 {
+        background-image: url('../image/background/960/Layer 11.jpg');
+    }
+    #section13 {
+        background-image: url('../image/background/960/Layer 12.jpg');
+    }
+    #section14 {
+        background-image: url('../image/background/960/Layer 13.jpg');
+    }
+    #section15 {
+        background-image: url('../image/background/960/Layer 14.jpg');
+    }
+    #section16 {
+        background-image: url('../image/background/960/Layer 15.jpg');
+    }
+    #section17 {
+        background-image: url('../image/background/960/Layer 16.jpg');
+    }
+    #section18 {
+        background-image: url('../image/background/960/Layer 17.jpg');
+    }
+    #section19 {
+        background-image: url('../image/background/960/Layer 18.jpg');
+    }
+    #section20 {
+        background-image: url('../image/background/960/Layer 19.jpg');
+    }
+    #section21 {
+        background-image: url('../image/background/960/Layer 20.jpg');
+    }
+    #section22 {
+        background-image: url('../image/background/960/Layer 21.jpg');
+    }
+    #section23 {
+        background-image: url('../image/background/960/Layer 22.jpg');
+    }
+    #section24 {
+        background-image: url('../image/background/960/Layer 23.jpg');
+    }
+    #section25 {
+        background-image: url('../image/background/960/Layer 24.jpg');
+    }
 }
 
-#section6 {
-    background-image: url('../image/Layer 5.jpg');
+@media (min-width: 1025px) {
+    /* big landscape tablets, laptops, and desktops */
+    
+    #section2 {
+        background-image: url('../image/background/1025/Layer 1.jpg');
+    }
+    #section3 {
+        background-image: url('../image/background/1025/Layer 2.jpg');
+    }
+    #section4 {
+        background-image: url('../image/background/1025/Layer 3.jpg');
+    }
+    #section5 {
+        background-image: url('../image/background/1025/Layer 4.jpg');
+    }
+    #section6 {
+        background-image: url('../image/background/1025/Layer 5.jpg');
+    }
+    #section7 {
+        background-image: url('../image/background/1025/Layer 6.jpg');
+    }
+    #section8 {
+        background-image: url('../image/background/1025/Layer 7.jpg');
+    }
+    #section9 {
+        background-image: url('../image/background/1025/Layer 8.jpg');
+    }
+    #section10 {
+        background-image: url('../image/background/1025/Layer 9.jpg');
+    }
+    #section11 {
+        background-image: url('../image/background/1025/Layer 10.jpg');
+    }
+    #section12 {
+        background-image: url('../image/background/1025/Layer 11.jpg');
+    }
+    #section13 {
+        background-image: url('../image/background/1025/Layer 12.jpg');
+    }
+    #section14 {
+        background-image: url('../image/background/1025/Layer 13.jpg');
+    }
+    #section15 {
+        background-image: url('../image/background/1025/Layer 14.jpg');
+    }
+    #section16 {
+        background-image: url('../image/background/1025/Layer 15.jpg');
+    }
+    #section17 {
+        background-image: url('../image/background/1025/Layer 16.jpg');
+    }
+    #section18 {
+        background-image: url('../image/background/1025/Layer 17.jpg');
+    }
+    #section19 {
+        background-image: url('../image/background/1025/Layer 18.jpg');
+    }
+    #section20 {
+        background-image: url('../image/background/1025/Layer 19.jpg');
+    }
+    #section21 {
+        background-image: url('../image/background/1025/Layer 20.jpg');
+    }
+    #section22 {
+        background-image: url('../image/background/1025/Layer 21.jpg');
+    }
+    #section23 {
+        background-image: url('../image/background/1025/Layer 22.jpg');
+    }
+    #section24 {
+        background-image: url('../image/background/1025/Layer 23.jpg');
+    }
+    #section25 {
+        background-image: url('../image/background/1025/Layer 24.jpg');
+    }
 }
 
-#section7 {
-    background-image: url('../image/Layer 6.jpg');
-}
-
-#section8 {
-    background-image: url('../image/Layer 7.jpg');
-}
-
-#section9 {
-    background-image: url('../image/Layer 8.jpg');
-}
-
-#section10 {
-    background-image: url('../image/Layer 9.jpg');
-}
-
-#section11 {
-    background-image: url('../image/Layer 10.jpg');
-}
-
-#section12 {
-    background-image: url('../image/Layer 11.jpg');
-}
-
-#section13 {
-    background-image: url('../image/Layer 12.jpg');
-}
-
-#section14 {
-    background-image: url('../image/Layer 13.jpg');
-}
-
-#section15 {
-    background-image: url('../image/Layer 14.jpg');
-}
-
-#section16 {
-    background-image: url('../image/Layer 15.jpg');
-}
-
-#section17 {
-    background-image: url('../image/Layer 16.jpg');
-}
-
-#section18 {
-    background-image: url('../image/Layer 17.jpg');
-}
-
-#section19 {
-    background-image: url('../image/Layer 18.jpg');
-}
-
-#section20 {
-    background-image: url('../image/Layer 19.jpg');
-}
-
-#section21 {
-    background-image: url('../image/Layer 20.jpg');
-}
-
-#section22 {
-    background-image: url('../image/Layer 21.jpg');
-}
-
-#section23 {
-    background-image: url('../image/Layer 22.jpg');
-}
-
-#section24 {
-    background-image: url('../image/Layer 23.jpg');
-}
-
-#section25 {
-    background-image: url('../image/Layer 24.jpg');
+@media (min-width: 1281px) {
+    /* hi-res laptops and desktops */
+    
+    #section2 {
+        background-image: url('../image/background/1920/Layer 1.jpg');
+    }
+    #section3 {
+        background-image: url('../image/background/1920/Layer 2.jpg');
+    }
+    #section4 {
+        background-image: url('../image/background/1920/Layer 3.jpg');
+    }
+    #section5 {
+        background-image: url('../image/background/1920/Layer 4.jpg');
+    }
+    #section6 {
+        background-image: url('../image/background/1920/Layer 5.jpg');
+    }
+    #section7 {
+        background-image: url('../image/background/1920/Layer 6.jpg');
+    }
+    #section8 {
+        background-image: url('../image/background/1920/Layer 7.jpg');
+    }
+    #section9 {
+        background-image: url('../image/background/1920/Layer 8.jpg');
+    }
+    #section10 {
+        background-image: url('../image/background/1920/Layer 9.jpg');
+    }
+    #section11 {
+        background-image: url('../image/background/1920/Layer 10.jpg');
+    }
+    #section12 {
+        background-image: url('../image/background/1920/Layer 11.jpg');
+    }
+    #section13 {
+        background-image: url('../image/background/1920/Layer 12.jpg');
+    }
+    #section14 {
+        background-image: url('../image/background/1920/Layer 13.jpg');
+    }
+    #section15 {
+        background-image: url('../image/background/1920/Layer 14.jpg');
+    }
+    #section16 {
+        background-image: url('../image/background/1920/Layer 15.jpg');
+    }
+    #section17 {
+        background-image: url('../image/background/1920/Layer 16.jpg');
+    }
+    #section18 {
+        background-image: url('../image/background/1920/Layer 17.jpg');
+    }
+    #section19 {
+        background-image: url('../image/background/1920/Layer 18.jpg');
+    }
+    #section20 {
+        background-image: url('../image/background/1920/Layer 19.jpg');
+    }
+    #section21 {
+        background-image: url('../image/background/1920/Layer 20.jpg');
+    }
+    #section22 {
+        background-image: url('../image/background/1920/Layer 21.jpg');
+    }
+    #section23 {
+        background-image: url('../image/background/1920/Layer 22.jpg');
+    }
+    #section24 {
+        background-image: url('../image/background/1920/Layer 23.jpg');
+    }
+    #section25 {
+        background-image: url('../image/background/1920/Layer 24.jpg');
+    }
 }

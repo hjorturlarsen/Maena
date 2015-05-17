@@ -339,6 +339,10 @@ span.char-style-override-15 {
     font-size: 6px;
 }
 
+.square {
+    display: none;
+}
+
 .image {
     display: table;
 }
@@ -369,152 +373,146 @@ div.floatRight {
 }
 
 img.frame-1 {
-    height: 25em;
-    width: auto;
+    width: 40%;
+    height: auto;
 }
 
 img.frame-5 {
-    height: 20em;
-    width: auto;
+    height: auto;
+    width: 100%;
 }
 
 img.frame-6 {
-    height: 25em;
-    width: auto;
+    height: auto;
+    width: 100%;
 }
 
 img.frame-7 {
-    height: 30em;
-    width: auto;
+    width: 50%;
+    height: auto;
 }
 
 img.frame-8 {
-    height: 20em;
-    width: auto;
+    width: 100%;
+    height: auto;
 }
 
 img.frame-9 {
-    height: 55em;
-    width: auto;
+    width: 100%;
+    height: auto;
 }
 
 img.frame-10 {
-    height: 40em;
-    width: auto;
+    width: 60%;
+    height: auto;
 }
 
 img.frame-11 {
-    height: 35em;
-    width: auto;
+    width: 80%;
+    height: auto;
 }
 
-img.frame-12 {
-    height: 20em;
-    width: auto;
+.frame-12 {
+    width: 50%;
+    height: auto;
 }
 
 img.frame-13 {
-    height: 50em;
-    width: auto;
+    width: 100%;
+    height: auto;
 }
 
 img.frame-14 {
-    height: 60em;
-    width: auto;
+    width: 100%;
+    height: auto;
 }
 
 img.frame-15 {
-    height: 30em;
-    width: auto;
+    width: 50%;
+    height: auto;
 }
 
 img.frame-16 {
-    height: 40em;
-    width: auto;
+    width: 60%;
+    height: auto;
 }
 
-img.frame-17 {
-    height: 50em;
-    width: auto;
+.frame-17 {
+    width: 30%;
+    height: auto;
 }
 
 img.frame-18 {
-    height: 20em;
-    width: auto;
+    width: 100%;
+    height: auto;
+}
+
+.frame-18 {
+    width: 50%;
+    height: auto;
 }
 
 img.frame-19 {
-    height: 30em;
-    width: auto;
+    width: 100%;
+    height: auto;
+}
+
+.frame-19 {
+    width: 100%;
+    height: auto;
 }
 
 img.frame-20 {
-    height: 20em;
-    width: auto;
+    width: 50%;
+    height: auto;
 }
 
 img.frame-21 {
-    height: 20em;
-    width: auto;
+    width: 50%;
+    height: auto;
 }
 
 img.frame-22 {
-    height: 20em;
-    width: auto;
+    width: 100%;
+    height: auto;
 }
 
 img.frame-23 {
-    height: 18em;
-    width: auto;
+    width: 100%;
+    height: auto;
 }
 
 img.frame-24 {
-    height: 18em;
-    width: auto;
+    width: 100%;
+    height: auto;
 }
 
 img.frame-25 {
-    height: 15em;
-    width: auto;
+    width: 50%;
+    height: auto;
 }
 
 img.frame-26 {
-    height: 15em;
-    width: auto;
+    width: 50%;
+    height: auto;
 }
 
 img.frame-27 {
-    height: 15em;
-    width: auto;
+    width: 50%;
+    height: auto;
 }
 
 img.frame-28 {
-    height: 15em;
-    width: auto;
+    width: 50%;
+    height: auto;
 }
 
 img.frame-29 {
-    height: 15em;
-    width: auto;
+    width: 50%;
+    height: auto;
 }
 
 img.frame-30 {
-    height: 15em;
-    width: auto;
-}
-
-img.frame-31 {
-    height: 15em;
-    width: auto;
-}
-
-img.frame-32 {
-    height: 15em;
-    width: auto;
-}
-
-/* Smartphones (portrait) ----------- */
-
-@media only screen and (max-width: 320px) {
-    /* Styles */
+    width: 100%;
+    height: auto;
 }
