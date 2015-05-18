@@ -1,81 +1,40 @@
-(function() {
+$(document).ajaxComplete(function() {
 
     var win = $(window);
-
-    // Load narrowest background image based on 
-    // viewport width, but never load anything narrower 
-    // that what's already loaded if anything.
-    var available = [
-        1024, 1280, 1366,
-        1400, 1680, 1920
-    ];
 
     win.resize(function() {
 
         var win_w = win.width(),
             win_h = win.height(),
-            ids = ['#bg0', '#bg1'],
+            ids = [],
             $bg;
 
-            $.each(ids, function(index, id) {
-            	$bg = $(id);
-            	//If the file name has numbers, then we have a valid file name
-            	var current = $bg.attr('src').match(/[0-9]+/) ? RegExp.$1 : null;
-            	var current_index = $.inArray(current, available);
-            	console.log("id: " + id + ", current: " + current);
-            	console.log("index: " + current_index);
+        //Add id tags to the array that represent each article
+        for (i = 1; i < 25; i++) {
+            ids.push("#article_" + i + "-img");
+        }
 
-            	/*
-            		If the current file is not defined or the
-            		current image width is smaller than the window's width
-            		Then we want to display a larger image.
-            	*/
-            	if(!current || (current < win_w) && (current < available[available.length-1])) {
-            		var chosen = available[available.length -1];
-            	}
-            	/*
-            		If the current file is not defined or the
-            		current image width is smaller than the window's width
-            		Then we want to display a smaller image.
-            	*/
-            	if(!current || (current > win_w) && (current > available[0])) {
-            		var chosen = available[available]
-            	}
-            });
+        // Load narrowest background image based on 
+        // viewport width, but never load anything narrower 
+        // that what's already loaded if anything.
+        var widths = [320, 480, 640, 960, 1025, 1920];
 
-            
+        for (var i = 1; i < ids.length; i++) {
+            $bg = $(ids[i]);
 
-            if (!current || ((current < win_w) && (current < available[available.length - 1]))) {
+            var current = 320;
 
-                var chosen = available[available.length - 1];
-
-                for (var i = 0; i < available.length; i++) {
-                    if (available[i] >= win_w) {
-                        chosen = available[i];
+            if (!current || ((current < win_w) && (current < widths[widths.length - 1]))) {
+                var chosen = widths[widths.length - 1];
+                for (var j = 0; j < widths.length; j++) {
+                    if (widths[j] >= win_w) {
+                        chosen = widths[j];
                         break;
                     }
                 }
-
                 // Set the new image
-                $bg.attr('src', '../image/bg/' + chosen + '-' + index + '.jpg');
-
-                // for testing...
-                console.log(id + ': Chosen background: ' + chosen);
-
+                $bg.attr('src', '../image/background/' + chosen + '/Layer ' + i + '.jpg');
             }
-
-            // Determine whether width or height should be 100%
-            if ((win_w / win_h) < ($bg.width() / $bg.height())) {
-                $bg.css({
-                    height: '100%',
-                    width: 'auto'
-                });
-            } else {
-                $bg.css({
-                    width: '100%',
-                    height: 'auto'
-                });
-            }
+        }
     }).resize();
-
-})(jQuery);
+});

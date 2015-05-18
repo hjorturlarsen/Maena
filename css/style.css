@@ -1,6 +1,98 @@
 html {
     color: #0C090A;
 }
+/* ------------------------------------------------------------------
+    Preloader animation
+------------------------------------------------------------------- */
+
+.page-loader {
+    position: fixed;
+    background: #fff;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 9998;
+}
+
+.loader {
+    position: absolute;
+    border-left: 2px solid #000;
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+    border-right: 2px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    height: 46px;
+    width: 46px;
+    left: 50%;
+    top: 50%;
+    margin: -23px 0 0 -23px;
+    text-indent: -9999em;
+    font-size: 10px;
+    z-index: 9999;
+    -webkit-animation: load 0.8s infinite linear;
+    -moz-animation: load 0.8s infinite linear;
+    ms-animation: load 0.8s infinite linear;
+    o-animation: load 0.8s infinite linear;
+    animation: load 0.8s infinite linear;
+}
+
+.loader,
+.loader:after {
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+}
+
+@-webkit-keyframes load {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes load {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+/* ------------------------------------------------------------------
+    Container for articles, responsive
+------------------------------------------------------------------- */
+
+.article-container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+    .article-container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .article-container {
+        width: 670px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .article-container {
+        width: 670px;
+    }
+}
 
 .fp-section {
     height: auto !important;
@@ -8,15 +100,6 @@ html {
 
 .container {
     margin-top: 0px;
-}
-
-.section {
-    background-color: #FFF;
-}
-
-.navbar-header p {
-    margin: 0px;
-    padding: 0px;
 }
 
 #header1 {
@@ -38,7 +121,8 @@ html {
     padding-top: 5em;
 }
 
-.article-icon {
+img.article-icon {
+    position: absolute;
     width: 4em;
     height: auto;
     float: right;
@@ -46,7 +130,7 @@ html {
     cursor: pointer;
 }
 
-.content-icon {
+img.content-icon {
     width: 4em;
     height: auto;
     float: left;
@@ -57,8 +141,13 @@ html {
     margin-top: -38px;
 }
 /* ------------------------------------------------------------------
-Navbar
+    Navbar
 ------------------------------------------------------------------- */
+
+.navbar-header p {
+    margin: 0px;
+    padding: 0px;
+}
 
 .navbar-custom {
     background-color: #FFF;
@@ -145,471 +234,10 @@ Navbar
     background: #0C090A;
 }
 /* ------------------------------------------------------------------
-Sections
+    Background
 ------------------------------------------------------------------- */
 
-.section {
-    background-size: 100% 100%;
-}
-
-@media (min-width: 320px) {
-    /* smartphones, iPhone, portrait 480x320 phones */
-    
-    #section2 {
-        background-image: url('../image/background/320/Layer 1.jpg');
-    }
-    #section3 {
-        background-image: url('../image/background/320/Layer 2.jpg');
-    }
-    #section4 {
-        background-image: url('../image/background/320/Layer 3.jpg');
-    }
-    #section5 {
-        background-image: url('../image/background/320/Layer 4.jpg');
-    }
-    #section6 {
-        background-image: url('../image/background/320/Layer 5.jpg');
-    }
-    #section7 {
-        background-image: url('../image/background/320/Layer 6.jpg');
-    }
-    #section8 {
-        background-image: url('../image/background/320/Layer 7.jpg');
-    }
-    #section9 {
-        background-image: url('../image/background/320/Layer 8.jpg');
-    }
-    #section10 {
-        background-image: url('../image/background/320/Layer 9.jpg');
-    }
-    #section11 {
-        background-image: url('../image/background/320/Layer 10.jpg');
-    }
-    #section12 {
-        background-image: url('../image/background/320/Layer 11.jpg');
-    }
-    #section13 {
-        background-image: url('../image/background/320/Layer 12.jpg');
-    }
-    #section14 {
-        background-image: url('../image/background/320/Layer 13.jpg');
-    }
-    #section15 {
-        background-image: url('../image/background/320/Layer 14.jpg');
-    }
-    #section16 {
-        background-image: url('../image/background/320/Layer 15.jpg');
-    }
-    #section17 {
-        background-image: url('../image/background/320/Layer 16.jpg');
-    }
-    #section18 {
-        background-image: url('../image/background/320/Layer 17.jpg');
-    }
-    #section19 {
-        background-image: url('../image/background/320/Layer 18.jpg');
-    }
-    #section20 {
-        background-image: url('../image/background/320/Layer 19.jpg');
-    }
-    #section21 {
-        background-image: url('../image/background/320/Layer 20.jpg');
-    }
-    #section22 {
-        background-image: url('../image/background/320/Layer 21.jpg');
-    }
-    #section23 {
-        background-image: url('../image/background/320/Layer 22.jpg');
-    }
-    #section24 {
-        background-image: url('../image/background/320/Layer 23.jpg');
-    }
-    #section25 {
-        background-image: url('../image/background/320/Layer 24.jpg');
-    }
-}
-
-@media (min-width: 481px) {
-    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-    
-    #section2 {
-        background-image: url('../image/background/640/Layer 1.jpg');
-    }
-    #section3 {
-        background-image: url('../image/background/640/Layer 2.jpg');
-    }
-    #section4 {
-        background-image: url('../image/background/640/Layer 3.jpg');
-    }
-    #section5 {
-        background-image: url('../image/background/640/Layer 4.jpg');
-    }
-    #section6 {
-        background-image: url('../image/background/640/Layer 5.jpg');
-    }
-    #section7 {
-        background-image: url('../image/background/640/Layer 6.jpg');
-    }
-    #section8 {
-        background-image: url('../image/background/640/Layer 7.jpg');
-    }
-    #section9 {
-        background-image: url('../image/background/640/Layer 8.jpg');
-    }
-    #section10 {
-        background-image: url('../image/background/640/Layer 9.jpg');
-    }
-    #section11 {
-        background-image: url('../image/background/640/Layer 10.jpg');
-    }
-    #section12 {
-        background-image: url('../image/background/640/Layer 11.jpg');
-    }
-    #section13 {
-        background-image: url('../image/background/640/Layer 12.jpg');
-    }
-    #section14 {
-        background-image: url('../image/background/640/Layer 13.jpg');
-    }
-    #section15 {
-        background-image: url('../image/background/640/Layer 14.jpg');
-    }
-    #section16 {
-        background-image: url('../image/background/640/Layer 15.jpg');
-    }
-    #section17 {
-        background-image: url('../image/background/640/Layer 16.jpg');
-    }
-    #section18 {
-        background-image: url('../image/background/640/Layer 17.jpg');
-    }
-    #section19 {
-        background-image: url('../image/background/640/Layer 18.jpg');
-    }
-    #section20 {
-        background-image: url('../image/background/640/Layer 19.jpg');
-    }
-    #section21 {
-        background-image: url('../image/background/640/Layer 20.jpg');
-    }
-    #section22 {
-        background-image: url('../image/background/640/Layer 21.jpg');
-    }
-    #section23 {
-        background-image: url('../image/background/640/Layer 22.jpg');
-    }
-    #section24 {
-        background-image: url('../image/background/640/Layer 23.jpg');
-    }
-    #section25 {
-        background-image: url('../image/background/640/Layer 24.jpg');
-    }
-}
-
-@media (min-width: 641px) {
-    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-    
-    #section2 {
-        background-image: url('../image/background/480/Layer 1.jpg');
-    }
-    #section3 {
-        background-image: url('../image/background/480/Layer 2.jpg');
-    }
-    #section4 {
-        background-image: url('../image/background/480/Layer 3.jpg');
-    }
-    #section5 {
-        background-image: url('../image/background/480/Layer 4.jpg');
-    }
-    #section6 {
-        background-image: url('../image/background/480/Layer 5.jpg');
-    }
-    #section7 {
-        background-image: url('../image/background/480/Layer 6.jpg');
-    }
-    #section8 {
-        background-image: url('../image/background/480/Layer 7.jpg');
-    }
-    #section9 {
-        background-image: url('../image/background/480/Layer 8.jpg');
-    }
-    #section10 {
-        background-image: url('../image/background/480/Layer 9.jpg');
-    }
-    #section11 {
-        background-image: url('../image/background/480/Layer 10.jpg');
-    }
-    #section12 {
-        background-image: url('../image/background/480/Layer 11.jpg');
-    }
-    #section13 {
-        background-image: url('../image/background/480/Layer 12.jpg');
-    }
-    #section14 {
-        background-image: url('../image/background/480/Layer 13.jpg');
-    }
-    #section15 {
-        background-image: url('../image/background/480/Layer 14.jpg');
-    }
-    #section16 {
-        background-image: url('../image/background/480/Layer 15.jpg');
-    }
-    #section17 {
-        background-image: url('../image/background/480/Layer 16.jpg');
-    }
-    #section18 {
-        background-image: url('../image/background/480/Layer 17.jpg');
-    }
-    #section19 {
-        background-image: url('../image/background/480/Layer 18.jpg');
-    }
-    #section20 {
-        background-image: url('../image/background/480/Layer 19.jpg');
-    }
-    #section21 {
-        background-image: url('../image/background/480/Layer 20.jpg');
-    }
-    #section22 {
-        background-image: url('../image/background/480/Layer 21.jpg');
-    }
-    #section23 {
-        background-image: url('../image/background/480/Layer 22.jpg');
-    }
-    #section24 {
-        background-image: url('../image/background/480/Layer 23.jpg');
-    }
-    #section25 {
-        background-image: url('../image/background/480/Layer 24.jpg');
-    }
-}
-
-@media (min-width: 961px) {
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
-    
-    #section2 {
-        background-image: url('../image/background/960/Layer 1.jpg');
-    }
-    #section3 {
-        background-image: url('../image/background/960/Layer 2.jpg');
-    }
-    #section4 {
-        background-image: url('../image/background/960/Layer 3.jpg');
-    }
-    #section5 {
-        background-image: url('../image/background/960/Layer 4.jpg');
-    }
-    #section6 {
-        background-image: url('../image/background/960/Layer 5.jpg');
-    }
-    #section7 {
-        background-image: url('../image/background/960/Layer 6.jpg');
-    }
-    #section8 {
-        background-image: url('../image/background/960/Layer 7.jpg');
-    }
-    #section9 {
-        background-image: url('../image/background/960/Layer 8.jpg');
-    }
-    #section10 {
-        background-image: url('../image/background/960/Layer 9.jpg');
-    }
-    #section11 {
-        background-image: url('../image/background/960/Layer 10.jpg');
-    }
-    #section12 {
-        background-image: url('../image/background/960/Layer 11.jpg');
-    }
-    #section13 {
-        background-image: url('../image/background/960/Layer 12.jpg');
-    }
-    #section14 {
-        background-image: url('../image/background/960/Layer 13.jpg');
-    }
-    #section15 {
-        background-image: url('../image/background/960/Layer 14.jpg');
-    }
-    #section16 {
-        background-image: url('../image/background/960/Layer 15.jpg');
-    }
-    #section17 {
-        background-image: url('../image/background/960/Layer 16.jpg');
-    }
-    #section18 {
-        background-image: url('../image/background/960/Layer 17.jpg');
-    }
-    #section19 {
-        background-image: url('../image/background/960/Layer 18.jpg');
-    }
-    #section20 {
-        background-image: url('../image/background/960/Layer 19.jpg');
-    }
-    #section21 {
-        background-image: url('../image/background/960/Layer 20.jpg');
-    }
-    #section22 {
-        background-image: url('../image/background/960/Layer 21.jpg');
-    }
-    #section23 {
-        background-image: url('../image/background/960/Layer 22.jpg');
-    }
-    #section24 {
-        background-image: url('../image/background/960/Layer 23.jpg');
-    }
-    #section25 {
-        background-image: url('../image/background/960/Layer 24.jpg');
-    }
-}
-
-@media (min-width: 1025px) {
-    /* big landscape tablets, laptops, and desktops */
-    
-    #section2 {
-        background-image: url('../image/background/1025/Layer 1.jpg');
-    }
-    #section3 {
-        background-image: url('../image/background/1025/Layer 2.jpg');
-    }
-    #section4 {
-        background-image: url('../image/background/1025/Layer 3.jpg');
-    }
-    #section5 {
-        background-image: url('../image/background/1025/Layer 4.jpg');
-    }
-    #section6 {
-        background-image: url('../image/background/1025/Layer 5.jpg');
-    }
-    #section7 {
-        background-image: url('../image/background/1025/Layer 6.jpg');
-    }
-    #section8 {
-        background-image: url('../image/background/1025/Layer 7.jpg');
-    }
-    #section9 {
-        background-image: url('../image/background/1025/Layer 8.jpg');
-    }
-    #section10 {
-        background-image: url('../image/background/1025/Layer 9.jpg');
-    }
-    #section11 {
-        background-image: url('../image/background/1025/Layer 10.jpg');
-    }
-    #section12 {
-        background-image: url('../image/background/1025/Layer 11.jpg');
-    }
-    #section13 {
-        background-image: url('../image/background/1025/Layer 12.jpg');
-    }
-    #section14 {
-        background-image: url('../image/background/1025/Layer 13.jpg');
-    }
-    #section15 {
-        background-image: url('../image/background/1025/Layer 14.jpg');
-    }
-    #section16 {
-        background-image: url('../image/background/1025/Layer 15.jpg');
-    }
-    #section17 {
-        background-image: url('../image/background/1025/Layer 16.jpg');
-    }
-    #section18 {
-        background-image: url('../image/background/1025/Layer 17.jpg');
-    }
-    #section19 {
-        background-image: url('../image/background/1025/Layer 18.jpg');
-    }
-    #section20 {
-        background-image: url('../image/background/1025/Layer 19.jpg');
-    }
-    #section21 {
-        background-image: url('../image/background/1025/Layer 20.jpg');
-    }
-    #section22 {
-        background-image: url('../image/background/1025/Layer 21.jpg');
-    }
-    #section23 {
-        background-image: url('../image/background/1025/Layer 22.jpg');
-    }
-    #section24 {
-        background-image: url('../image/background/1025/Layer 23.jpg');
-    }
-    #section25 {
-        background-image: url('../image/background/1025/Layer 24.jpg');
-    }
-}
-
-@media (min-width: 1281px) {
-    /* hi-res laptops and desktops */
-    
-    #section2 {
-        background-image: url('../image/background/1920/Layer 1.jpg');
-    }
-    #section3 {
-        background-image: url('../image/background/1920/Layer 2.jpg');
-    }
-    #section4 {
-        background-image: url('../image/background/1920/Layer 3.jpg');
-    }
-    #section5 {
-        background-image: url('../image/background/1920/Layer 4.jpg');
-    }
-    #section6 {
-        background-image: url('../image/background/1920/Layer 5.jpg');
-    }
-    #section7 {
-        background-image: url('../image/background/1920/Layer 6.jpg');
-    }
-    #section8 {
-        background-image: url('../image/background/1920/Layer 7.jpg');
-    }
-    #section9 {
-        background-image: url('../image/background/1920/Layer 8.jpg');
-    }
-    #section10 {
-        background-image: url('../image/background/1920/Layer 9.jpg');
-    }
-    #section11 {
-        background-image: url('../image/background/1920/Layer 10.jpg');
-    }
-    #section12 {
-        background-image: url('../image/background/1920/Layer 11.jpg');
-    }
-    #section13 {
-        background-image: url('../image/background/1920/Layer 12.jpg');
-    }
-    #section14 {
-        background-image: url('../image/background/1920/Layer 13.jpg');
-    }
-    #section15 {
-        background-image: url('../image/background/1920/Layer 14.jpg');
-    }
-    #section16 {
-        background-image: url('../image/background/1920/Layer 15.jpg');
-    }
-    #section17 {
-        background-image: url('../image/background/1920/Layer 16.jpg');
-    }
-    #section18 {
-        background-image: url('../image/background/1920/Layer 17.jpg');
-    }
-    #section19 {
-        background-image: url('../image/background/1920/Layer 18.jpg');
-    }
-    #section20 {
-        background-image: url('../image/background/1920/Layer 19.jpg');
-    }
-    #section21 {
-        background-image: url('../image/background/1920/Layer 20.jpg');
-    }
-    #section22 {
-        background-image: url('../image/background/1920/Layer 21.jpg');
-    }
-    #section23 {
-        background-image: url('../image/background/1920/Layer 22.jpg');
-    }
-    #section24 {
-        background-image: url('../image/background/1920/Layer 23.jpg');
-    }
-    #section25 {
-        background-image: url('../image/background/1920/Layer 24.jpg');
-    }
+img.bg-img {
+    width: 100%;
+    height: 100%;
 }
