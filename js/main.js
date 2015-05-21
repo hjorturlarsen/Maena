@@ -12,6 +12,57 @@
     $(document).ready(function() {
 
         /* ---------------------------------------------- /*
+         * Initialize some key variables
+        /* ---------------------------------------------- */
+        var navbar = $('.navbar-custom'),
+            header1 = $('#header1'),
+            header2 = $('#header2'),
+            navHeight = navbar.height(),
+            width = Math.max($(window).width(), window.innerWidth),
+            active = $('.active'),
+            mobileTest;
+
+        //Updates the current active section
+        $(window).scroll(function() {
+            active = $('.section.active');
+            //updateHeader();
+        })
+
+        navbar.hide();
+
+
+
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            mobileTest = true;
+        }
+
+        $(".fancybox").fancybox({
+            padding: 0,
+            openEffect: 'elastic',
+            openSpeed: 150,
+            closeEffect: 'elastic',
+            closeSpeed: 150,
+            closeClick: true,
+            helpers: {
+                overlay: {
+                    css: {
+                        'background': 'rgba(0,0,0,0.85)'
+                    }
+                }
+            }
+        });
+
+        /* ---------------------------------------------- /*
+         * Get data from json file
+        /* ---------------------------------------------- */
+        $.get('json/maena.json', function(data) {
+            success: writeArticles(data)
+                .done(function() {
+                    initFullpage();
+                });
+        });
+
+        /* ---------------------------------------------- /*
          * Pass the json data to handlebars.js
         /* ---------------------------------------------- */
         function writeArticles(data) {
@@ -26,11 +77,10 @@
         /* ---------------------------------------------- */
         function initFullpage() {
             $('#fullpage').fullpage({
-                anchors: ['grein0', 'grein1', 'grein2', 'grein3', 'grein4', 'grein5', 'grein6', 'grein7', 'grein8', 'grein9', 'grein10', 'grein11', 'grein12', 'grein13', 'grein14', 'grein15', 'grein16', 'grein17', 'grein18', 'grein19', 'grein20', 'grein21', 'grein22', 'grein23', 'grein24'],
-
                 //Scrolling
                 css3: true,
-                scrollingSpeed: 700,
+                //TODO
+                //anchors:['', 'Inngangur', 'Sjónræn upplifun landkönnuða', ''],
                 autoScrolling: false,
                 fitToSection: false,
                 scrollBar: false,
@@ -63,16 +113,8 @@
                 //events
                 onLeave: function(index, nextIndex, direction) {
                     var leavingSection = $(this);
-                    if (index == 1 && direction == 'down') {
-                        fixNavbar(true);
-                    } else if (index == 2 && direction == 'up') {
-                        fixNavbar(false);
-                    }
                     updateHeader(nextIndex);
                 },
-                afterLoad: function(anchorLink, index) {},
-                afterRender: function() {},
-                afterResize: function() {},
                 afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
                     if (slideIndex >= 1) {
                         $.fn.fullpage.setFitToSection(true);
@@ -86,6 +128,8 @@
                 }
             });
 
+            //Prevent user from scrolling from article to article
+            //without going back to the images.
             $('.article').on('mousewheel', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
@@ -104,32 +148,22 @@
          * Update header according to article
         /* ---------------------------------------------- */
         function updateHeader(index) {
+            index -= 2;
             var title1 = $('#section' + index).find('.title1').text();
             var title2 = $('#section' + index).find('.title2').text();
-            if (index <= 2) {
+
+            if (index < 1) {
                 navbar.hide();
             } else {
                 navbar.show();
             }
-            if (index == 9) {
+            if (title1 == 9) {
                 header1.css('font-size', '1.5em');
             } else {
                 header1.css('font-size', '2em');
             }
             header1.text(title1);
             header2.text(title2);
-        }
-
-        /* ---------------------------------------------- /*
-         * Fixed navbar animation on scroll
-        /* ---------------------------------------------- */
-        function fixNavbar(bool) {
-            if (bool == true) {
-                navbar.addClass('navbar-transparent');
-            }
-            if (bool == false) {
-                navbar.removeClass('navbar-transparent');
-            }
         }
 
         /* ---------------------------------------------- /*
@@ -164,60 +198,12 @@
             }
         };
 
-
-
-        /* ---------------------------------------------- /*
-         * Initialize some key variables
-        /* ---------------------------------------------- */
-        var navbar = $('.navbar-custom'),
-            header1 = $('#header1'),
-            header2 = $('#header2'),
-            navHeight = navbar.height(),
-            width = Math.max($(window).width(), window.innerWidth),
-            mobileTest;
-
-        navbar.hide();
-
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            mobileTest = true;
-        }
-
-        $(".fancybox").fancybox({
-            padding: 0,
-            openEffect: 'elastic',
-            openSpeed: 150,
-            closeEffect: 'elastic',
-            closeSpeed: 150,
-            closeClick: true,
-            helpers: {
-                overlay: {
-                    css: {
-                        'background': 'rgba(0,0,0,0.85)'
-                    }
-                }
-            }
-        });
-
         $(window).resize(function() {
+            /* ---------------------------------------------- /*
+             * Write article data with handlebars.js
+            /* ---------------------------------------------- */
             var width = Math.max($(window).width(), window.innerWidth);
             hoverDropdown(width, mobileTest);
-        });
-
-
-        /* ---------------------------------------------- /*
-         * Get data from json file
-        /* ---------------------------------------------- */
-        $.get('json/maena.json', function(data) {
-            success: writeArticles(data).done(function() {
-                initFullpage();
-            });
-        });
-
-        /* ---------------------------------------------- /*
-         * Write article data with handlebars.js
-        /* ---------------------------------------------- */
-        $(document).ajaxComplete(function() {
-            $(".log").text("Triggered ajaxComplete handler.");
         });
 
         /* ---------------------------------------------- /*

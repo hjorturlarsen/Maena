@@ -10,7 +10,7 @@ $(document).ajaxComplete(function() {
             $bg;
 
         //Add id tags to the array that represent each article
-        for (i = 1; i < 25; i++) {
+        for (var i = 0; i < 25; i++) {
             ids.push("#article_" + i + "-img");
         }
 
@@ -19,7 +19,7 @@ $(document).ajaxComplete(function() {
         // that what's already loaded if anything.
         var widths = [320, 480, 640, 960, 1025, 1920];
 
-        for (var i = 1; i < ids.length; i++) {
+        for (var i = 1; i <= ids.length; i++) {
             $bg = $(ids[i]);
 
             var current = 320;
