@@ -73,6 +73,7 @@ html {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    padding-top: 4em;
 }
 
 @media (min-width: 768px) {
@@ -119,7 +120,6 @@ img.article-icon {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    right: 1920px;
     margin-top: -38px;
 }
 
@@ -137,9 +137,11 @@ img.content-icon {
     Navbar
 ------------------------------------------------------------------- */
 
-.navbar-header p {
+.navbar-header p a {
     margin: 0px;
     padding: 0px;
+    line-height: 2em;
+    vertical-align: middle;
 }
 
 .navbar-custom {
@@ -149,10 +151,10 @@ img.content-icon {
     font-family: "Roboto Condensed", sans-serif;
     z-index: 1000;
     transition: all 0.5s ease;
-    min-height: 3em;
 }
 
 #header {
+    min-height: 3em;
     background-color: #FFFFFF;
     opacity: 0.98;
     -webkit-box-shadow: 0px -3px 17px 0px rgba(158, 158, 158, 0.62);
@@ -226,6 +228,12 @@ img.content-icon {
 .navbar-custom .navbar-toggle .icon-bar {
     background: #0C090A;
 }
+
+#contents-navbar img{
+    height: 2.5em;
+    width: auto;
+
+}
 /* ------------------------------------------------------------------
     Background
 ------------------------------------------------------------------- */
@@ -249,7 +257,6 @@ img.bg-img {
     }
     #main-title {
         font-size: 5em;
-        text-align: center;
     }
 }
 
@@ -262,7 +269,6 @@ img.bg-img {
     }
     #main-title {
         font-size: 3em;
-        text-align: center;
     }
 }
 
@@ -270,6 +276,7 @@ img.bg-img {
     font-family: "Acta Display Bold", serif;
     line-height: 5em;
     vertical-align: top;
+    text-align: center;
 }
 
 .circular img {

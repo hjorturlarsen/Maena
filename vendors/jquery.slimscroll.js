@@ -2,12 +2,12 @@
  * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
  * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
  *
- * Version: 1.3.3
+ * Version: 1.3.2 (modified for fullpage.js)
  *
  */
 (function($) {
 
-  $.fn.extend({
+  jQuery.fn.extend({
     slimScroll: function(options) {
 
       var defaults = {
@@ -129,6 +129,9 @@
               }
               else if ('destroy' in options)
               {
+                // clear slimscroll mouse event listeners
+                detachWheel();
+
                 // remove slimscroll elements
                 bar.remove();
                 rail.remove();
@@ -142,16 +145,9 @@
 
             return;
         }
-        else if ($.isPlainObject(options))
-        {
-            if ('destroy' in options)
-            {
-              return;
-            }
-        }
 
         // optionally set height to the parent's height
-        o.height = (o.height == 'auto') ? me.parent().height() : o.height;
+        o.height = (options.height == 'auto') ? me.parent().height() : options.height;
 
         // wrap content
         var wrapper = $(divS)
@@ -395,6 +391,19 @@
           }
         }
 
+        function detachWheel()
+        {
+          if (window.removeEventListener)
+          {
+            this.removeEventListener('DOMMouseScroll', _onWheel);
+            this.removeEventListener('mousewheel', _onWheel);
+          }
+          else
+          {
+            document.detachEvent('onmousewheel', _onWheel);
+          }
+        }
+
         function getBarHeight()
         {
           // calculate scrollbar height and make sure it is not too small
@@ -463,8 +472,8 @@
     }
   });
 
-  $.fn.extend({
-    slimscroll: $.fn.slimScroll
+  jQuery.fn.extend({
+    slimscroll: jQuery.fn.slimScroll
   });
 
 })(jQuery);

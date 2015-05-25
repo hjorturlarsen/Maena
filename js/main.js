@@ -75,8 +75,8 @@
                 //Scrolling
                 css3: true,
                 anchors: ['Efnisyfirlit', 'Inngangur', 'grein1', 'grein2', 'grein3', 'grein4', 'grein5', 'grein6', 'grein7', 'grein8', 'grein9', 'grein10', 'grein11', 'grein12', 'grein13', 'grein14', 'grein15', 'grein16', 'grein17', 'grein18', 'grein19', 'grein20', 'grein21', 'grein22', 'grein23', 'grein24', ],
-                autoScrolling: false,
-                fitToSection: false,
+                autoScrolling: true,
+                fitToSection: true,
                 scrollBar: false,
                 easing: 'easeInOutCubic',
                 easingcss3: 'ease',
@@ -111,13 +111,13 @@
                 },
                 afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
                     if (slideIndex >= 1) {
-                        $.fn.fullpage.setFitToSection(true);
+                        //$.fn.fullpage.setFitToSection(true);
                         $(window).trigger("scroll");
                     }
                 },
                 onSlideLeave: function(anchorLink, index, slideIndex, direction) {
                     if (slideIndex == 1) {
-                        $.fn.fullpage.setFitToSection(false);
+                        //$.fn.fullpage.setFitToSection(false);
                     }
                     hideOrShowNav(slideIndex);
                 }

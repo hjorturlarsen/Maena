@@ -26,7 +26,6 @@
     <script type="text/javascript" src="vendors/handlebars-v3.0.0.js"></script>
     <script type="text/javascript" src="vendors/bootstrap/bootstrap.js"></script>
     <script type="text/javascript" src="vendors/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
-    <script type="text/javascript" src="vendors/mousewheel.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/background.js"></script>
 </head>
@@ -46,8 +45,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <div>
+                <a href="#" class="pull-left" id="contents-navbar"><img class="content-icon" src="/image/icons/contents.png"></img>
+                </a>
+                <div class="pull-left">
                     <p id="header1"></p>
+                    <p id="header2"></p>
                 </div>
             </div>
             <div class="collapse navbar-collapse" id="custom-collapse">
@@ -81,6 +83,7 @@
                         <p id="main-title">Mæna</p>
                     </div>
                 </div>
+                <p class="title" id="main-title">Mæna</p>
             </div>
             {{#each this}} {{#if entry}}
             <div class="section" id="entry-section">
@@ -90,19 +93,20 @@
             </div>
             {{/if}} {{#if content}}
             <div class="section" id="section{{@index}}">
-                <div class="slide" is="slide-{{@index}}">
-                    <img class="article-icon" src="image/icons/article.png">
+                <div class="slide">
+                    <img class="article-icon" src="/image/icons/article.png">
                     <img class="bg-img" src="" id="{{@key}}-img">
                 </div>
                 <div class="slide article" id="{{@key}}">
-                    <img class="content-icon" src="image/icons/contents.png">
-                    <div class="titles article-container" id="title1-{{@index}}">
-                        <div class="title1">{{{this.title1}}}</div>
-                        {{#if title2}}
-                        <div class="title2">{{{this.title2}}}</div>
-                        {{/if}}
+                    <img class="content-icon" src="/image/icons/contents.png">
+                    <div class="title1 article-container" id="title1-{{@index}}">
+                        {{{this.title1}}}
                     </div>
-                    
+                    {{#if title2}}
+                    <div class="title2 article-container" id="title2-{{@index}}">
+                        {{{this.title2}}}
+                    </div>
+                    {{/if}}
                     <div class="content article-container">
                         {{{this.content}}}
                     </div>
