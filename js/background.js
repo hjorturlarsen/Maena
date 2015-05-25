@@ -33,7 +33,7 @@ $(document).ajaxComplete(function() {
                     }
                 }
                 // Set the new image
-                $bg.attr('src', '../image/background/' + chosen + '/Layer ' + i + '.jpg');
+                $bg.attr('src', 'image/background/' + chosen + '/Layer_' + i + '.jpg');
             }
         }
     }).resize();

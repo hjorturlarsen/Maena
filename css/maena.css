@@ -43,10 +43,21 @@ div.square {
     margin: 1em;
 }
 
+@media screen and (max-width: 500px) {
+    p.Heiti-greinar {
+        font-size: 3em
+    }
+}
+
+@media screen and (min-width: 501px) {
+    p.Heiti-greinar {
+        font-size: 5em
+    }
+}
+
 p.Heiti-greinar {
     color: #000000;
     font-family: "Acta Display Bold", serif;
-    font-size: 5em;
     font-variant: normal;
     font-weight: bold;
     line-height: 1.114;
@@ -69,15 +80,21 @@ p.Hofundur {
     text-decoration: none;
 }
 
-.title2 {
+.titles {
     margin-bottom: 2em;
 }
 
 img.Hofundur {
-    width: 1em;
-    margin-right: 1em;
+    width: 1.5em;
+    height: auto;
+    margin-right: .5em;
     margin-left: 0px;
     margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+img#ingi {
+    width: 1.15em;
 }
 
 p.Meginmal {
@@ -433,7 +450,8 @@ img.frame-15 {
 }
 
 img.frame-16 {
-    width: 60%;
+    margin-top: 0px;
+    width: 58.5%;
     height: auto;
 }
 

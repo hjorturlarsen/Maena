@@ -19,18 +19,9 @@
             header2 = $('#header2'),
             navHeight = navbar.height(),
             width = Math.max($(window).width(), window.innerWidth),
-            active = $('.active'),
             mobileTest;
 
-        //Updates the current active section
-        $(window).scroll(function() {
-            active = $('.section.active');
-            //updateHeader();
-        })
-
         navbar.hide();
-
-
 
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             mobileTest = true;
@@ -51,6 +42,10 @@
                 }
             }
         });
+
+        if(mobileTest == true) {
+            $('#tbl-section').css('display', 'none');
+        }
 
         /* ---------------------------------------------- /*
          * Get data from json file
@@ -79,8 +74,7 @@
             $('#fullpage').fullpage({
                 //Scrolling
                 css3: true,
-                //TODO
-                //anchors:['', 'Inngangur', 'Sjónræn upplifun landkönnuða', ''],
+                anchors: ['Efnisyfirlit', 'Inngangur', 'grein1', 'grein2', 'grein3', 'grein4', 'grein5', 'grein6', 'grein7', 'grein8', 'grein9', 'grein10', 'grein11', 'grein12', 'grein13', 'grein14', 'grein15', 'grein16', 'grein17', 'grein18', 'grein19', 'grein20', 'grein21', 'grein22', 'grein23', 'grein24', ],
                 autoScrolling: false,
                 fitToSection: false,
                 scrollBar: false,
@@ -125,14 +119,15 @@
                     if (slideIndex == 1) {
                         $.fn.fullpage.setFitToSection(false);
                     }
+                    hideOrShowNav(slideIndex);
                 }
             });
 
             //Prevent user from scrolling from article to article
             //without going back to the images.
-            $('.article').on('mousewheel', function(e) {
+            $('.article').on('mousewheel touchmove', function(e) {
                 e.preventDefault();
-                e.stopPropagation();
+                //e.stopPropagation();
             });
 
             $('.article-icon').click(function() {
@@ -145,25 +140,56 @@
         }
 
         /* ---------------------------------------------- /*
-         * Update header according to article
+         * Update header for table of contents
+        /* ---------------------------------------------- */
+        $(document).ajaxComplete(function() {
+            var mainTitle = $('#main-title');
+            $('img.circular-img').hover(function() {
+                var iconHovered = $(this);
+                var articleHovered = iconHovered.attr('id').replace('icon', '#section');
+                $('#main-title').text(($(articleHovered).find('.title1').text()));
+                if (iconHovered.attr('id') == "icon10") {
+                    mainTitle.css('font-size', '2.5em');
+                }
+                else {
+                    mainTitle.css('font-size', '4em');
+                }
+            },
+            function() {
+                mainTitle.text("Mæna");
+                mainTitle.css('font-size', '4em');
+            });
+        });
+
+        /* ---------------------------------------------- /*
+         * Hide the navbar while inside an article
+        /* ---------------------------------------------- */
+        function hideOrShowNav(slideIndex) {
+            if(slideIndex == 0) {
+                navbar.hide();
+            }
+            else {
+                navbar.show();
+            }
+        }
+
+        /* ---------------------------------------------- /*
+         * Update navbar according to article
         /* ---------------------------------------------- */
         function updateHeader(index) {
             index -= 2;
             var title1 = $('#section' + index).find('.title1').text();
-            var title2 = $('#section' + index).find('.title2').text();
-
-            if (index < 1) {
+            if (index < 0) {
                 navbar.hide();
             } else {
                 navbar.show();
             }
-            if (title1 == 9) {
+            if (index == 10) {
                 header1.css('font-size', '1.5em');
             } else {
                 header1.css('font-size', '2em');
             }
             header1.text(title1);
-            header2.text(title2);
         }
 
         /* ---------------------------------------------- /*
@@ -196,15 +222,7 @@
                     $(this).parent().toggleClass('open');
                 });
             }
-        };
-
-        $(window).resize(function() {
-            /* ---------------------------------------------- /*
-             * Write article data with handlebars.js
-            /* ---------------------------------------------- */
-            var width = Math.max($(window).width(), window.innerWidth);
-            hoverDropdown(width, mobileTest);
-        });
+        }
 
         /* ---------------------------------------------- /*
          * Navbar collapse on click
@@ -213,6 +231,11 @@
             if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
                 $(this).collapse('hide');
             }
+        });
+
+        $(window).resize(function() {
+            var width = Math.max($(window).width(), window.innerWidth);
+            hoverDropdown(width, mobileTest);
         });
     });
 
