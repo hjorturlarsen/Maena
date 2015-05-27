@@ -6,7 +6,7 @@
          * Preloader
         /* ---------------------------------------------- */
         $('.loader').fadeOut();
-        $('.page-loader').delay(350).fadeOut('slow');
+        $('.page-loader').delay(10).fadeOut('slow');
     });
 
     $(document).ready(function() {
@@ -14,14 +14,13 @@
         /* ---------------------------------------------- /*
          * Initialize some key variables
         /* ---------------------------------------------- */
-        var navbar = $('.navbar-custom'),
+        var navbar = $('#header'),
             header1 = $('#header1'),
-            header2 = $('#header2'),
             navHeight = navbar.height(),
             width = Math.max($(window).width(), window.innerWidth),
-            mobileTest;
-
-        navbar.hide();
+            mainTitle,
+            goBack = $('#go-back'),
+            mobileTest = false;
 
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             mobileTest = true;
@@ -43,17 +42,15 @@
             }
         });
 
-        if(mobileTest == true) {
-            $('#tbl-section').css('display', 'none');
-        }
-
         /* ---------------------------------------------- /*
          * Get data from json file
         /* ---------------------------------------------- */
         $.get('json/maena.json', function(data) {
             success: writeArticles(data)
                 .done(function() {
-                    initFullpage();
+                    writeMobileMenu(data).done(function() {
+                        initFullpage();
+                    });
                 });
         });
 
@@ -67,6 +64,13 @@
             return $.ajax();
         }
 
+        function writeMobileMenu(data) {
+            var source = $('#menu_template').html();
+            var template = Handlebars.compile(source);
+            $('#menu_handlebars').append(template(data));
+            return $.ajax();
+        }
+
         /* ---------------------------------------------- /*
          * Initialize fullpage.js
         /* ---------------------------------------------- */
@@ -75,8 +79,8 @@
                 //Scrolling
                 css3: true,
                 anchors: ['Efnisyfirlit', 'Inngangur', 'grein1', 'grein2', 'grein3', 'grein4', 'grein5', 'grein6', 'grein7', 'grein8', 'grein9', 'grein10', 'grein11', 'grein12', 'grein13', 'grein14', 'grein15', 'grein16', 'grein17', 'grein18', 'grein19', 'grein20', 'grein21', 'grein22', 'grein23', 'grein24', ],
-                autoScrolling: true,
-                fitToSection: true,
+                autoScrolling: false,
+                fitToSection: false,
                 scrollBar: false,
                 easing: 'easeInOutCubic',
                 easingcss3: 'ease',
@@ -107,19 +111,24 @@
                 //events
                 onLeave: function(index, nextIndex, direction) {
                     var leavingSection = $(this);
-                    updateHeader(nextIndex);
+                    var leavingSectionID = leavingSection.attr('id');
+                    updateHeader(nextIndex, leavingSectionID);
                 },
                 afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
                     if (slideIndex >= 1) {
-                        //$.fn.fullpage.setFitToSection(true);
+                        $.fn.fullpage.setFitToSection(true);
                         $(window).trigger("scroll");
                     }
                 },
                 onSlideLeave: function(anchorLink, index, slideIndex, direction) {
                     if (slideIndex == 1) {
-                        //$.fn.fullpage.setFitToSection(false);
+                        $.fn.fullpage.setFitToSection(false);
                     }
+                    updateHeader(index);
                     hideOrShowNav(slideIndex);
+                },
+                afterLoad: function(anchirLink, index) {
+                    updateHeader(index);
                 }
             });
 
@@ -127,7 +136,6 @@
             //without going back to the images.
             $('.article').on('mousewheel touchmove', function(e) {
                 e.preventDefault();
-                //e.stopPropagation();
             });
 
             $('.article-icon').click(function() {
@@ -139,57 +147,61 @@
             });
         }
 
-        /* ---------------------------------------------- /*
-         * Update header for table of contents
-        /* ---------------------------------------------- */
         $(document).ajaxComplete(function() {
-            var mainTitle = $('#main-title');
+            /* ---------------------------------------------- /*
+             * Update header for table of contents
+            /* ---------------------------------------------- */
+            mainTitle = $('#main-title');
             $('img.circular-img').hover(function() {
                 var iconHovered = $(this);
                 var articleHovered = iconHovered.attr('id').replace('icon', '#section');
-                $('#main-title').text(($(articleHovered).find('.title1').text()));
-                if (iconHovered.attr('id') == "icon10") {
-                    mainTitle.css('font-size', '2.5em');
-                }
-                else {
-                    mainTitle.css('font-size', '4em');
-                }
-            },
-            function() {
-                mainTitle.text("Mæna");
-                mainTitle.css('font-size', '4em');
+                $(header1).text(($(articleHovered).find('.title1').text()));
             });
+            if (mobileTest == true) {
+                $('#icon-table').css('display', 'none');
+                $('img.article-icon').css('display', 'none');
+                $('img.content-icon').css('display', 'none');
+                $('.title').css('display', 'inline');
+                $(goBack).click(function() {
+                    $.fn.fullpage.moveSlideLeft();
+                });
+            }
+
+            if (mobileTest == false) {
+                $('#mobileMenu').css('display', 'none');
+            }
         });
+
+        /* ---------------------------------------------- /*
+         * Update navbar according to article
+        /* ---------------------------------------------- */
+        function updateHeader(index, leavingsectionID) {
+            index -= 2;
+            var title1 = $('#section' + index).find('.title1').text();
+            if (index >= 0 || leavingsectionID == 'tbl-section') {
+                navbar.addClass('dropshadow');
+            } else {
+                navbar.removeClass('dropshadow');
+            }
+            header1.text(title1);
+        }
 
         /* ---------------------------------------------- /*
          * Hide the navbar while inside an article
         /* ---------------------------------------------- */
         function hideOrShowNav(slideIndex) {
-            if(slideIndex == 0) {
+            if (slideIndex == 0 && mobileTest == false) {
                 navbar.hide();
             }
+            else if (slideIndex == 0 && mobileTest == true) {
+                goBack.css('display', 'inline');
+                header1.css('display', 'none');
+            } 
             else {
                 navbar.show();
+                header1.css('display', 'inline');
+                goBack.css('display', 'none');
             }
-        }
-
-        /* ---------------------------------------------- /*
-         * Update navbar according to article
-        /* ---------------------------------------------- */
-        function updateHeader(index) {
-            index -= 2;
-            var title1 = $('#section' + index).find('.title1').text();
-            if (index < 0) {
-                navbar.hide();
-            } else {
-                navbar.show();
-            }
-            if (index == 10) {
-                header1.css('font-size', '1.5em');
-            } else {
-                header1.css('font-size', '2em');
-            }
-            header1.text(title1);
         }
 
         /* ---------------------------------------------- /*

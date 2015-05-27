@@ -22,7 +22,7 @@
     <!-- Scripts -->
     <script type="text/javascript" src="vendors/jquery-2.1.3.js"></script>
     <script type="text/javascript" src="vendors/fullpage/jquery.fullPage.js"></script>
-    <script type="text/javascript" src="vendors/jquery.slimscroll.js"></script>
+    <script type="text/javascript" src="vendors/fullpage/jquery.slimscroll.js"></script>
     <script type="text/javascript" src="vendors/handlebars-v3.0.0.js"></script>
     <script type="text/javascript" src="vendors/bootstrap/bootstrap.js"></script>
     <script type="text/javascript" src="vendors/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
@@ -37,7 +37,7 @@
     </div>
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" id="header" role="navigation">
-        <div class="container">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -45,17 +45,26 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="pull-left" id="contents-navbar"><img class="content-icon" src="/image/icons/contents.png"></img>
-                </a>
-                <div class="pull-left">
-                    <p id="header1"></p>
-                    <p id="header2"></p>
+                <div class="header-text">
+                    <a class="navbar-brand" id="header1" href="#">Mæna</a>
+                <i id="go-back" class="fa fa-angle-left"></i>
                 </div>
             </div>
             <div class="collapse navbar-collapse" id="custom-collapse">
                 <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown" id="mobileMenu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Efnisyfirlit</a>
+                        <ul class="dropdown-menu" id="menu_handlebars">
+                            <script type="text/x-handlebars-template" id="menu_template">
+                                <li>
+                                    {{#each this}}{{#if title1}}
+                                    <a href="#grein{{@index}}">{{this.item}}</a> {{/if}}{{/each}}
+                                </li>
+                            </script>
+                        </ul>
+                    </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Safn</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="safn">Safn</a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Mæna 2014</a></li>
                             <li><a href="#">Mæna 2013</a></li>
@@ -79,11 +88,10 @@
                         <a href="#grein{{@index}}"><img class="circular-img" id="icon{{@index}}" src="image/thumbs/{{@index}}.jpg" alt="{{item}}"></a>
                     </div>
                     {{/if}}{{/each}}
-                    <div class="title">
-                        <p id="main-title">Mæna</p>
-                    </div>
                 </div>
-                <p class="title" id="main-title">Mæna</p>
+                <div class="title">
+                    <p id="main-title">Mæna</p>
+                </div>
             </div>
             {{#each this}} {{#if entry}}
             <div class="section" id="entry-section">
