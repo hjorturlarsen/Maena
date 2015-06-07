@@ -38,6 +38,10 @@
     src: url("../fonts/Everson Mono.ttf");
 }
 
+.title1 {
+    padding-top: 4em;
+}
+
 div.square {
     max-width: 15em;
     margin: 1em;

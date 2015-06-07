@@ -156,6 +156,9 @@
                 var iconHovered = $(this);
                 var articleHovered = iconHovered.attr('id').replace('icon', '#section');
                 $(header1).text(($(articleHovered).find('.title1').text()));
+            },
+            function() {
+                $(header1).text("Mæna");
             });
             if (mobileTest == true) {
                 $('#icon-table').css('display', 'none');

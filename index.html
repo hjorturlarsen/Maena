@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="image_src" 
+      type="image/jpeg" 
+      href="image/icon-facebook.gif" />
     <title>Mæna</title>
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="vendors/bootstrap/bootstrap.css">
@@ -66,11 +69,11 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="safn">Safn</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Mæna 2014</a></li>
-                            <li><a href="#">Mæna 2013</a></li>
-                            <li><a href="#">Mæna 2012</a></li>
-                            <li><a href="#">Mæna 2011</a></li>
-                            <li><a href="#">Mæna 2010</a></li>
+                            <li><a href="http://maena.is/">Mæna 2014</a></li>
+                            <li><a href="http://maena.is/maena4.html">Mæna 2013</a></li>
+                            <li><a href="http://maena.is/maena3.html">Mæna 2012</a></li>
+                            <li><a href="http://maena.is/maena2.html">Mæna 2011</a></li>
+                            <li><a href="http://maena.is/maena1.html">Mæna 2010</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -102,11 +105,11 @@
             {{/if}} {{#if content}}
             <div class="section" id="section{{@index}}">
                 <div class="slide">
-                    <img class="article-icon" src="/image/icons/article.png">
-                    <img class="bg-img" src="" id="{{@key}}-img">
+                    <img class="article-icon" src="image/icons/article.png" alt="article-icon">
+                    <img class="bg-img" src="" id="{{@key}}-img" alt="background-img">
                 </div>
                 <div class="slide article" id="{{@key}}">
-                    <img class="content-icon" src="/image/icons/contents.png">
+                    <img class="content-icon" src="image/icons/contents.png" alt="content_icon">
                     <div class="title1 article-container" id="title1-{{@index}}">
                         {{{this.title1}}}
                     </div>

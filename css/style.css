@@ -73,17 +73,19 @@ html {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    padding-top: 4em;
 }
 
 #header1 {
     color: #0C090A;
-    margin-top: .1em;
     min-height: 1em;
     font-family: "UniversLTStd-Black";
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+}
+
+.content {
+    padding-top: 3em;
 }
 
 .header-text {
