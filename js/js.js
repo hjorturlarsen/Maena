@@ -91,7 +91,8 @@ $(document).ready(function ()
     {
         $.each(ARTICLES, function (index, object)
         {
-            object.setBackground();
+            //Test if works
+            this.bg = this.setBackground();
         });
     }
 
