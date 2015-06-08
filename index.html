@@ -29,8 +29,7 @@
     <script type="text/javascript" src="vendors/handlebars-v3.0.0.js"></script>
     <script type="text/javascript" src="vendors/bootstrap/bootstrap.js"></script>
     <script type="text/javascript" src="vendors/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/background.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
 </head>
 
 <body>
@@ -38,97 +37,7 @@
     <div class="page-loader">
         <div class="loader">Loading...</div>
     </div>
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" id="header" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <div class="header-text">
-                    <a class="navbar-brand" id="header1" href="#">Mæna</a>
-                <i id="go-back" class="fa fa-angle-left"></i>
-                </div>
-            </div>
-            <div class="collapse navbar-collapse" id="custom-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown" id="mobileMenu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Efnisyfirlit</a>
-                        <ul class="dropdown-menu" id="menu_handlebars">
-                            <script type="text/x-handlebars-template" id="menu_template">
-                                <li>
-                                    {{#each this}}{{#if title1}}
-                                    <a href="#grein{{@index}}">{{this.item}}</a> {{/if}}{{/each}}
-                                </li>
-                            </script>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="safn">Safn</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="http://maena.is/">Mæna 2014</a></li>
-                            <li><a href="http://maena.is/maena4.html">Mæna 2013</a></li>
-                            <li><a href="http://maena.is/maena3.html">Mæna 2012</a></li>
-                            <li><a href="http://maena.is/maena2.html">Mæna 2011</a></li>
-                            <li><a href="http://maena.is/maena1.html">Mæna 2010</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Fullpage -->
-    <div id="fullpage">
-        <!-- Handlebars template -->
-        <script type="text/x-handlebars-template" id="article_template">
-            <div class="section" id="tbl-section">
-                <div id="icon-table">
-                    {{#each this}}{{#if title1}}
-                    <div class="circular">
-                        <a href="#grein{{@index}}"><img class="circular-img" id="icon{{@index}}" src="image/thumbs/{{@index}}.jpg" alt="{{item}}"></a>
-                    </div>
-                    {{/if}}{{/each}}
-                </div>
-                <div class="title">
-                    <p id="main-title">Mæna</p>
-                </div>
-            </div>
-            {{#each this}} {{#if entry}}
-            <div class="section" id="entry-section">
-                <div class="article-container">
-                    {{{this.entry}}}
-                </div>
-            </div>
-            {{/if}} {{#if content}}
-            <div class="section" id="section{{@index}}">
-                <div class="slide">
-                    <img class="article-icon" src="image/icons/article.png" alt="article-icon">
-                    <img class="bg-img" src="" id="{{@key}}-img" alt="background-img">
-                </div>
-                <div class="slide article" id="{{@key}}">
-                    <img class="content-icon" src="image/icons/contents.png" alt="content_icon">
-                    <div class="title1 article-container" id="title1-{{@index}}">
-                        {{{this.title1}}}
-                    </div>
-                    {{#if title2}}
-                    <div class="title2 article-container" id="title2-{{@index}}">
-                        {{{this.title2}}}
-                    </div>
-                    {{/if}}
-                    <div class="content article-container">
-                        {{{this.content}}}
-                    </div>
-                    <div class="footnotes article-container">
-                        {{{this.footnotes}}}
-                    </div>
-                </div>
-            </div>
-            {{/if}} {{/each}}
-        </script>
-    </div>
+    
 </body>
 
 </html>
